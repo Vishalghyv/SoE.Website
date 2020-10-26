@@ -16,7 +16,7 @@
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #9575CD;
+  background: #6e4bac;
   color: floralwhite; }
 
 address {
@@ -38,21 +38,28 @@ body {
   padding: 10px; }
 
 .carousel {
-  background: #512DA8; }
+  background: #141414;
+  position: relative;
+  top: -50;
+  left: 0; }
+
   .carousel .carousel-item {
-    height: 300px; }
+    height: 600px; }
+    
     .carousel .carousel-item img {
       position: absolute;
       top: 0;
       left: 0;
-      min-height: 300px; }
+      opacity: 0.4;
+      min-width: 100%;
+      min-height: 600px; }
 
 #carouselButton {
   right: 0px;
   position: absolute;
   bottom: 0px;
   z-index: 1; }
-
+/* 
 #loginModal .modal-header {
   background-color: #512DA8;
   color: floralwhite; }
@@ -69,4 +76,4 @@ body {
     color: floralwhite; }
 
 #reserveModal .modal-body {
-  background-color: #D1C4E9; }
+  background-color: #D1C4E9; } */
