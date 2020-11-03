@@ -1,136 +1,615 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/swiper-bundle-min.css">
-    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.css"> -->
-    <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .swiper-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+	<!-- favicon item -->
+	<link rel="icon" href="assets/favicon.ico">
 
-        .swiper-slide {
-            position: relative;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 40px 60px;
-            background-size: cover;
-            background-position: center;
-        }
+	<link rel="stylesheet" href="assets/css/swiper-bundle-min.css">
 
-        .swiper-slide .title,
-        .swiper-slide .subtitle {
-            background-color: rgb(255, 255, 255);
-            color: black;
-            margin: 0 auto;
-            padding: 10px;
-            text-align: center;
-            position: absolute;
-            left: 10%;
-            width: 40%;
-            mix-blend-mode: screen;
-            transition: all 1s ease-in-out;
-            transition-delay: 1s;
-        }
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-        .swiper-slide .title {
-            top: 0%;
-            transform: translateY(-100%);
-            font-size: 10vw;
-            font-weight: 600;
-        }
+	<title>JNU | SE</title>
+	<style>
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
 
-        .swiper-slide .subtitle {
-            font-size: 7vw;
-            font-weight: 600;
-            bottom: 0;
-            transform: translateY(calc(7vw + 3 * 10px));
-        }
+		.swiper-container {
+			position: relative;
+		}
 
-        .swiper-slide.swiper-slide-active .title,
-        .swiper-slide.swiper-slide-duplicate-active .title {
-            transform: translateY(150%);
-        }
-        .swiper-slide.swiper-slide-active .subtitle,
-        .swiper-slide.swiper-slide-duplicate-active .subtitle {
-            transform: translateY(-300%);
-        }
-    </style>
+		.swiper-slide {
+			position: relative;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 40px 60px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.swiper-slide .title,
+		.swiper-slide .subtitle {
+			background-color: rgba(255, 255, 255, 0.616);
+			color: black;
+			margin: 0 auto;
+			text-align: center;
+			position: absolute;
+			left: 20%;
+			width: 40%;
+			mix-blend-mode: screen;
+			transition: transform 0.5s linear;
+			transition-delay: 1.5s;
+		}
+
+		.swiper-slide .title {
+			top: 100%;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		.swiper-slide .subtitle {
+			font-size: 1rem;
+			font-weight: 600;
+			bottom: 100%;
+		}
+
+		/* Small devices (landscape phones, 576px and up) */
+		@media (min-width: 576px) {
+			.swiper-slide {
+				padding: 20px 30px;
+			}
+
+			.swiper-slide .title,
+			.swiper-slide .subtitle {
+				padding: 10px;
+				left: 10%;
+				width: 40%;
+			}
+
+			.swiper-slide .title {
+				font-size: 5rem;
+			}
+
+			.swiper-slide .subtitle {
+				font-size: 3rem;
+			}
+
+		}
+
+		/* Medium devices (tablets, 768px and up) */
+		@media (min-width: 768px) {
+			.swiper-slide {
+				padding: 40px 60px;
+			}
+
+			.swiper-slide .title,
+			.swiper-slide .subtitle {
+				left: 10%;
+				width: 35%;
+			}
+
+			.swiper-slide .title {
+				font-size: 4rem;
+			}
+
+			.swiper-slide .subtitle {
+				font-size: 2.5rem;
+			}
+		}
+
+		/* Large devices (desktops, 992px and up) */
+		@media (min-width: 992px) {
+			.swiper-slide .title {
+				font-size: 6rem;
+			}
+
+			.swiper-slide .subtitle {
+				font-size: 3rem;
+			}
+		}
+
+		/* Extra large devices (large desktops, 1200px and up) */
+		@media (min-width: 1200px) {}
+
+		.top-header {
+			color: #8bcce6;
+			background-color: rgb(39, 39, 199);
+		}
+
+		.cd-intro {
+			text-align: center;
+			margin: auto;
+		}
+
+		.cd-headline {
+			font-size: 3rem;
+			line-height: 1.2;
+		}
+
+		.cd-words-wrapper {
+			display: inline-block;
+			position: relative;
+		}
+
+		.cd-words-wrapper b {
+			display: inline-block;
+			position: absolute;
+			white-space: nowrap;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+
+		.cd-words-wrapper b.is-visible {
+			position: relative;
+		}
+
+		.no-js .cd-words-wrapper b {
+			opacity: 0;
+		}
+
+		.no-js .cd-words-wrapper b.is-visible {
+			opacity: 1;
+		}
+
+		.cd-headline.zoom .cd-words-wrapper {
+			-webkit-perspective: 300px;
+			-moz-perspective: 300px;
+			perspective: 300px;
+		}
+
+		.cd-headline.zoom b {
+			opacity: 0;
+		}
+
+		.cd-headline.zoom b.is-visible {
+			opacity: 1;
+			-webkit-animation: zoom-in 0.8s;
+			-moz-animation: zoom-in 0.8s;
+			animation: zoom-in 0.8s;
+		}
+
+		.cd-headline.zoom b.is-hidden {
+			-webkit-animation: zoom-out 0.8s;
+			-moz-animation: zoom-out 0.8s;
+			animation: zoom-out 0.8s;
+		}
+
+		@-webkit-keyframes zoom-in {
+			0% {
+				opacity: 0;
+				-webkit-transform: translateZ(100px);
+			}
+
+			100% {
+				opacity: 1;
+				-webkit-transform: translateZ(0);
+			}
+		}
+
+		@-moz-keyframes zoom-in {
+			0% {
+				opacity: 0;
+				-moz-transform: translateZ(100px);
+			}
+
+			100% {
+				opacity: 1;
+				-moz-transform: translateZ(0);
+			}
+		}
+
+		@keyframes zoom-in {
+			0% {
+				opacity: 0;
+				-webkit-transform: translateZ(100px);
+				-moz-transform: translateZ(100px);
+				-ms-transform: translateZ(100px);
+				-o-transform: translateZ(100px);
+				transform: translateZ(100px);
+			}
+
+			100% {
+				opacity: 1;
+				-webkit-transform: translateZ(0);
+				-moz-transform: translateZ(0);
+				-ms-transform: translateZ(0);
+				-o-transform: translateZ(0);
+				transform: translateZ(0);
+			}
+		}
+
+		@-webkit-keyframes zoom-out {
+			0% {
+				opacity: 1;
+				-webkit-transform: translateZ(0);
+			}
+
+			100% {
+				opacity: 0;
+				-webkit-transform: translateZ(-100px);
+			}
+		}
+
+		@-moz-keyframes zoom-out {
+			0% {
+				opacity: 1;
+				-moz-transform: translateZ(0);
+			}
+
+			100% {
+				opacity: 0;
+				-moz-transform: translateZ(-100px);
+			}
+		}
+
+		@keyframes zoom-out {
+			0% {
+				opacity: 1;
+				-webkit-transform: translateZ(0);
+				-moz-transform: translateZ(0);
+				-ms-transform: translateZ(0);
+				-o-transform: translateZ(0);
+				transform: translateZ(0);
+			}
+
+			100% {
+				opacity: 0;
+				-webkit-transform: translateZ(-100px);
+				-moz-transform: translateZ(-100px);
+				-ms-transform: translateZ(-100px);
+				-o-transform: translateZ(-100px);
+				transform: translateZ(-100px);
+			}
+		}
+
+		.header-bottom {
+			transition: all 1s;
+		}
+
+		.sticky {
+			z-index: 100;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.header-top {
+			background-color: dodgerblue;
+		}
+	</style>
 </head>
 
 <body>
-    <div class="box">
-        <div class="inner-box"></div>
-    </div>
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
-                <div class="subtitle">Subtitle</div>
-                <div class="title">Slide 1</div>
-            </div>
-            <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
-                <div class="subtitle">Subtitle</div>
-                <div class="title">Slide 2</div>
-            </div>
-            <div class="swiper-slide" style="background-image: url('images/slide3.jpg');">
-                <div class="subtitle">Subtitle</div>
-                <div class="title">Slide 3</div>
-            </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-prev swiper-button-white"></div>
-        <div class="swiper-button-next swiper-button-white"></div>
-    </div>
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col col-sm-4 text-center">Text1</div>
+					<div class="col col-sm-4 text-center">Utility Header</div>
+					<div class="col col-sm-4 text-center">Text2</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-middle">
+			<div class="container">
+				<div class="row justify-content-center">
+					<!-- <div class="col-12 col-sm-1 text-center">
+						<img src="img/logo.png" class="img-fluid">
+					</div> -->
+					<div class="col-12 col-lg-8">
+						<div class="cd-intro">
+							<h1 class="cd-headline zoom">
+								<span class="cd-words-wrapper">
+									<b class="is-visible"><span>&#127748;</span> School of Engineering <span>&#127774;</span></b>
+									<b>Jawaharlal Nehru University</b>
+									<b>JNU | SE</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<nav id="navbar_top" class="navbar navbar-default navbar-expand-sm bg-dark">
+				<div class="container">
+					<button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#Navbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" widht="41"></a> -->
+					<div class="collapse navbar-collapse" id="Navbar">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active"><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span>
+									Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>
+									About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>
+									Menu</a></li>
+							<li class="nav-item"><a class="nav-link" href="contactus.html"><span
+										class="fa fa-address-card fa-lg"></span> Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- Swiper -->
+	<div class="container-fluid p-0">
+		<img src="images/slide1.jpg" alt="" class="bg-img img-fluid" style="position: absolute; z-index: -1;">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
+					<div class="title">Slide 1</div>
+					<div class="subtitle">Subtitle</div>
+				</div>
+				<div class="swiper-slide" data-swiper-autoplay="3000" style="background-image: url('images/slide2.jpg');">
+					<div class="title">Slide 2</div>
+					<div class="subtitle">Subtitle</div>
+				</div>
+				<div class="swiper-slide" data-swiper-autoplay="3000" style="background-image: url('images/slide3.jpg');">
+					<div class="title">Slide 3</div>
+					<div class="subtitle">Subtitle</div>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination swiper-pagination-white"></div>
+			<!-- Add Navigation -->
+			<div class="swiper-button-prev swiper-button-white">
+				<!-- <div>
+                    <img src="images/slide1.jpg" alt="" srcset="" width="100" height="100">
+                </div> -->
+			</div>
+			<div class="swiper-button-next swiper-button-white"></div>
+		</div>
+	</div>
+	<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente illum, magnam nostrum neque dolor velit labore? Tenetur autem a accusamus porro. Rem voluptas hic fugit nihil harum consequuntur. Incidunt repellendus cum possimus illum impedit? Maxime corrupti debitis consequatur eligendi neque quos reiciendis labore aspernatur quis repudiandae? Voluptatem dolorum delectus molestias adipisci ea, amet non atque odio incidunt provident recusandae laudantium debitis fugit libero distinctio veniam quod nihil consequatur natus quam eum perferendis aliquam aperiam inventore? Ducimus ipsa, odit, fuga voluptates magni tenetur quae consectetur, obcaecati quos quod doloribus. Officiis, eveniet ut voluptate suscipit optio natus earum beatae veritatis? Excepturi totam nulla, quas reprehenderit eligendi, facilis perspiciatis magnam a ab dolores eum animi iusto! Nemo hic fuga fugiat repudiandae necessitatibus corrupti accusantium dicta! Dolorem ex dolorum, blanditiis voluptate illum eveniet iste magni repellat iure rerum unde autem rem libero, et corporis quod repellendus totam nesciunt id perspiciatis maiores impedit excepturi maxime. Eaque ipsum, ea ducimus earum illo optio similique expedita nesciunt non adipisci ut asperiores quaerat tenetur laborum ab consequuntur blanditiis eius velit nemo recusandae eos pariatur dolor! Blanditiis iusto eveniet voluptatum distinctio rem excepturi officia repellendus, obcaecati molestiae, ipsum aliquam officiis voluptates saepe fuga sit perferendis sunt ut nostrum provident illum necessitatibus! Sequi dolorem quasi quo. Obcaecati minima repellat est aperiam, voluptatibus nam eveniet inventore recusandae. Perspiciatis cumque officia rem expedita iure pariatur sed rerum dolore, amet ullam quibusdam hic a ea doloremque in, consequatur, enim explicabo. Minima asperiores nostrum facere excepturi repellendus cum, deserunt corporis aspernatur itaque sit perspiciatis ducimus reiciendis quisquam praesentium maiores totam eligendi omnis exercitationem temporibus. Impedit dolores pariatur corrupti rerum, vel aperiam? Eaque nisi incidunt facere. Ullam aliquid tempora veniam et ea natus quidem impedit aut eos aliquam quaerat, provident repudiandae ratione cupiditate dolor illo suscipit dignissimos. Minima necessitatibus voluptatum quisquam blanditiis. Ducimus optio enim explicabo distinctio aliquam nobis, repellat nisi hic cum libero nihil praesentium voluptatum nostrum illo maxime atque impedit. Quisquam vitae inventore itaque a at beatae est laudantium reprehenderit ea, eos non deleniti suscipit minima corporis voluptas dolor magni impedit recusandae iusto similique veniam iste provident iure dolorum. Dolores pariatur eaque dignissimos? Recusandae, aut. Ea fugit quis, ullam, enim repellendus veritatis sapiente voluptas hic deleniti cupiditate reiciendis molestiae ratione animi dolores necessitatibus deserunt repellat nihil, blanditiis ut commodi exercitationem pariatur. Possimus aut veniam vero. Quos molestiae cum optio ipsam debitis, reprehenderit nihil velit dolore cupiditate illum aperiam quisquam, officia harum placeat facilis perspiciatis voluptatibus eos aliquam minus soluta porro similique! Amet quam excepturi ea ut, vero consequuntur quisquam nobis cupiditate earum repellendus magnam sint expedita dolor ex, quia, natus iure vel. Dicta, necessitatibus? Fuga expedita quasi magni impedit dolor amet recusandae quibusdam asperiores unde autem hic corrupti fugit nulla, dolorem quas illo ea. Alias, numquam ad magni vero libero fuga quam recusandae nulla porro dolore cumque id excepturi aperiam adipisci totam, rem quisquam? Earum suscipit ipsa debitis quia facilis optio saepe repellendus labore vel. In dolore obcaecati consequatur laboriosam culpa? Suscipit eius itaque ducimus tenetur corporis magni blanditiis magnam eum provident.
+	</div>
+	<!-- Swiper JS -->
+	<script src="./js/swiper-bundle-min.js"></script>
 
-    <!-- Swiper JS -->
-    <script src="js/swiper-bundle-min.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+		window.onresize = function () {
+			location.reload();
+		}
+		window.onload = function () {
+			setTransform();
+		}
+		var swiper = new Swiper('.swiper-container', {
+			speed: 1500,
+			spacebetween: 30,
+			loop: true,
+			slidesperview: 1,
+			effect: 'fade',
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            speed: 3000,
-            spacebetween: 30,
-            loop: true,
-            slidesperview: 1,
+		swiper.on('slideChange', setTransform);
 
-            effect: 'fade',
-            // parallax: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
+		function setTransform() {
+			let curSlide = swiper.slides[swiper.activeIndex];
+			let title = curSlide.querySelector('.title');
+			let subtitle = curSlide.querySelector('.subtitle');
+
+			let moveUp = String(-0.5 * h - title.offsetHeight + 40) + 'px';
+			let moveDown = String(0.5 * h + subtitle.offsetHeight + 40) + 'px';
+
+
+			title.style.transform = `translateY(${moveUp})`;
+			subtitle.style.transform = `translateY(${moveDown})`;
+			swiper.slides.forEach(slide => {
+				if (slide !== swiper.slides[swiper.activeIndex]) {
+					slide.querySelector('.title').style.transform = 'none';
+					slide.querySelector('.subtitle').style.transform = 'none';
+				}
+			});
+		}
+		let h = document.querySelector('.bg-img').offsetHeight;
+		document.querySelector('.swiper-container').style.height = h + 'px';
+		console.log(h);
+	</script>
+	<script>
+		window.onscroll = function () { stickyFun() };
+
+		var navbar = document.querySelector('.header-bottom');
+		var sticky = navbar.offsetTop;
+		function stickyFun() {
+			if (window.pageYOffset >= sticky) {
+				navbar.classList.add('sticky');
+			} else {
+				navbar.classList.remove('sticky');
+			}
+		}
+	</script>
+	
+	<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+		<script>
+			jQuery(document).ready(function ($) {
+				//set animation timing
+				var animationDelay = 2500,
+					//loading bar effect
+					barAnimationDelay = 3800,
+					barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
+					//letters effect
+					lettersDelay = 50,
+					//type effect
+					typeLettersDelay = 150,
+					selectionDuration = 500,
+					typeAnimationDelay = selectionDuration + 800,
+					//clip effect 
+					revealDuration = 600,
+					revealAnimationDelay = 1500;
+	
+				initHeadline();
+	
+	
+				function initHeadline() {
+					//insert <i> element for each letter of a changing word
+					singleLetters($('.cd-headline.letters').find('b'));
+					//initialise headline animation
+					animateHeadline($('.cd-headline'));
+				}
+	
+				function singleLetters($words) {
+					$words.each(function () {
+						var word = $(this),
+							letters = word.text().split(''),
+							selected = word.hasClass('is-visible');
+						for (i in letters) {
+							if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
+							letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
+						}
+						var newLetters = letters.join('');
+						word.html(newLetters).css('opacity', 1);
+					});
+				}
+	
+				function animateHeadline($headlines) {
+					var duration = animationDelay;
+					$headlines.each(function () {
+						var headline = $(this);
+	
+						if (headline.hasClass('loading-bar')) {
+							duration = barAnimationDelay;
+							setTimeout(function () { headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
+						} else if (headline.hasClass('clip')) {
+							var spanWrapper = headline.find('.cd-words-wrapper'),
+								newWidth = spanWrapper.width() + 10
+							spanWrapper.css('width', newWidth);
+						} else if (!headline.hasClass('type')) {
+							//assign to .cd-words-wrapper the width of its longest word
+							var words = headline.find('.cd-words-wrapper b'),
+								width = 0;
+							words.each(function () {
+								var wordWidth = $(this).width();
+								if (wordWidth > width) width = wordWidth;
+							});
+							headline.find('.cd-words-wrapper').css('width', width);
+						};
+	
+						//trigger animation
+						setTimeout(function () { hideWord(headline.find('.is-visible').eq(0)) }, duration);
+					});
+				}
+	
+				function hideWord($word) {
+					var nextWord = takeNext($word);
+	
+					if ($word.parents('.cd-headline').hasClass('type')) {
+						var parentSpan = $word.parent('.cd-words-wrapper');
+						parentSpan.addClass('selected').removeClass('waiting');
+						setTimeout(function () {
+							parentSpan.removeClass('selected');
+							$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
+						}, selectionDuration);
+						setTimeout(function () { showWord(nextWord, typeLettersDelay) }, typeAnimationDelay);
+	
+					} else if ($word.parents('.cd-headline').hasClass('letters')) {
+						var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
+						hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
+						showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
+	
+					} else if ($word.parents('.cd-headline').hasClass('clip')) {
+						$word.parents('.cd-words-wrapper').animate({ width: '2px' }, revealDuration, function () {
+							switchWord($word, nextWord);
+							showWord(nextWord);
+						});
+	
+					} else if ($word.parents('.cd-headline').hasClass('loading-bar')) {
+						$word.parents('.cd-words-wrapper').removeClass('is-loading');
+						switchWord($word, nextWord);
+						setTimeout(function () { hideWord(nextWord) }, barAnimationDelay);
+						setTimeout(function () { $word.parents('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
+	
+					} else {
+						switchWord($word, nextWord);
+						setTimeout(function () { hideWord(nextWord) }, animationDelay);
+					}
+				}
+	
+				function showWord($word, $duration) {
+					if ($word.parents('.cd-headline').hasClass('type')) {
+						showLetter($word.find('i').eq(0), $word, false, $duration);
+						$word.addClass('is-visible').removeClass('is-hidden');
+	
+					} else if ($word.parents('.cd-headline').hasClass('clip')) {
+						$word.parents('.cd-words-wrapper').animate({ 'width': $word.width() + 10 }, revealDuration, function () {
+							setTimeout(function () { hideWord($word) }, revealAnimationDelay);
+						});
+					}
+				}
+	
+				function hideLetter($letter, $word, $bool, $duration) {
+					$letter.removeClass('in').addClass('out');
+	
+					if (!$letter.is(':last-child')) {
+						setTimeout(function () { hideLetter($letter.next(), $word, $bool, $duration); }, $duration);
+					} else if ($bool) {
+						setTimeout(function () { hideWord(takeNext($word)) }, animationDelay);
+					}
+	
+					if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
+						var nextWord = takeNext($word);
+						switchWord($word, nextWord);
+					}
+				}
+	
+				function showLetter($letter, $word, $bool, $duration) {
+					$letter.addClass('in').removeClass('out');
+	
+					if (!$letter.is(':last-child')) {
+						setTimeout(function () { showLetter($letter.next(), $word, $bool, $duration); }, $duration);
+					} else {
+						if ($word.parents('.cd-headline').hasClass('type')) { setTimeout(function () { $word.parents('.cd-words-wrapper').addClass('waiting'); }, 200); }
+						if (!$bool) { setTimeout(function () { hideWord($word) }, animationDelay) }
+					}
+				}
+	
+				function takeNext($word) {
+					return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+				}
+	
+				function takePrev($word) {
+					return (!$word.is(':first-child')) ? $word.prev() : $word.parent().children().last();
+				}
+	
+				function switchWord($oldWord, $newWord) {
+					$oldWord.removeClass('is-visible').addClass('is-hidden');
+					$newWord.removeClass('is-hidden').addClass('is-visible');
+				}
+			});
+		</script>
 </body>
 
 </html>
