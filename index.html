@@ -72,57 +72,60 @@
 		</div>
 		<div class="header-bottom">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="#">
-					<img src="images/jnuLogo.png" alt="" class="img-fluid">
-				</a>
-				<div class="wrapper"></div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="menu-icon-bar"></span>
-					<span class="menu-icon-bar"></span>
-					<span class="menu-icon-bar"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Programmes</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Admission</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Faculty</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Research</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Events</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Clubs</a>
-								<a class="dropdown-item" href="#">Start Up</a>
-								<a class="dropdown-item" href="#">Research</a>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Facilities</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Gallary</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contact Us</a>
-						</li>
-					</ul>
+				<div class="container">
+					<a class="navbar-brand" href="#">
+						<img src="" id="img-navbar" alt="" class="img-fluid">
+					</a>
+					<div class="wrapper"></div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="menu-icon-bar"></span>
+						<span class="menu-icon-bar"></span>
+						<span class="menu-icon-bar"></span>
+					</button>
+	
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Programmes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Admission</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Faculty</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Research</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Events</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Clubs</a>
+									<a class="dropdown-item" href="#">Start Up</a>
+									<a class="dropdown-item" href="#">Research</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Facilities</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Gallary</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Contact Us</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+				
 			</nav>
 		</div>
 	</header>
@@ -578,7 +581,8 @@
 		$(document).ready(function () {
 			if ($(window).width() <= 768) {
 				// $('.navbar-brand img').attr('src', 'images/jnu-logo.png');
-				$(".logo-container img").attr('src', 'images/jnuLogo.png');
+				$(".logo-container img").attr('src', 'images/jnuLogo.png'); // ??
+				$("#img-navbar").attr('src', 'images/jnuLogo.png')
 			}
 		})
 	</script>
@@ -587,10 +591,15 @@
 		console.log(hoheader);
 		$(function ($) {
 			$(window).on('scroll', function () {
-				if ($(this).scrollTop() >= 200) {
+				if ($(this).scrollTop() >= 225) {
 					$('.navbar').addClass('fixed-top');
-				} else if ($(this).scrollTop() <= (200 - hoheader)) {
+					$("#img-navbar").attr('src', 'images/jnuLogo.png')
+
+				} else if ($(this).scrollTop() <= (225 - hoheader)) {
 					$('.navbar').removeClass('fixed-top');
+					if ($(window).width() >= 768)
+					$("#img-navbar").attr('src', '');
+					
 				}
 			});
 
