@@ -22,13 +22,18 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- swiper.js css -->
 	<link rel="stylesheet" href="css/swiper-bundle-min.css">
-	<link rel="stylesheet" href="css/swiper-bundle.css">
+	<!-- <link rel="stylesheet" href="css/swiper-bundle.css"> -->
 	<!-- owl-corousel css-->
 	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"> -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"> -->
 	<style>
+		html * {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
 		@font-face {
 			font-family: Arya;
 			src: url(fonts/Arya-Bold.ttf);
@@ -37,7 +42,10 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header" id="page-wrapper">
+		<div class="ribbon-wrapper">
+			<div class="ribbon">Feedback</div>
+		</div>
 		<div class="header-top">
 			<div class="container">
 				<div class="row py-md-1">
@@ -47,35 +55,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid header-middle">
-			<div class="row m-0 justify-content-center align-items-center">
-				<div class="col-12 col-md-4 d-flex justify-content-end">
-					<div class="logo-container">
-						<div class="logo-img">
-							<img src="images/jnuLogo.png" class="img-fluid">
-						</div>
+		<div class="wrapper container-fluid header-middle">
+			<div class="wrapper-elm">
+				<div class="logo-container">
+					<div class="logo-img">
+						<img src="images/jnuLogo.png" class="img-fluid">
 					</div>
 				</div>
-				<div class="col-12 col-md-8 justify-content-start">
-					<div class="cd-intro">
-						<h1 class="cd-headline">
-							<span class="cd-words-wrapper">
-								<b class="is-visible">School of Engineering <span>&#127774;</span></b>
-								<b>Jawaharlal Nehru University</b>
-								<b style="font-family: Arya;">जवाहरलाल नेहरू विश्वविद्यालय</b>
-							</span>
-						</h1>
-					</div>
+				<div class="cd-intro">
+					<h1 class="cd-headline slide">
+						<span class="cd-words-wrapper">
+							<b class="is-visible">School of Engineering &#127774;</b>
+							<b>Jawaharlal Nehru University</b>
+							<b style="font-family: Arya;">जवाहरलाल नेहरू विश्वविद्यालय</b>
+						</span>
+					</h1>
 				</div>
 			</div>
-		</div>
 		</div>
 		<div class="header-bottom">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="#">
 					<img src="images/jnuLogo.png" alt="" class="img-fluid">
 				</a>
-				<div class="wrapper"></div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="menu-icon-bar"></span>
@@ -131,28 +133,33 @@
 		<img src="images/slide1.jpg" alt="" class="bg-img img-fluid" style="position: absolute; z-index: -1;">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
+				<div class="swiper-slide"
+					style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)), url('images/slide1.jpg');">
 					<div class="title">Slide 1</div>
 					<div class="subtitle">Subtitle</div>
 				</div>
-				<div class="swiper-slide" data-swiper-autoplay="3000" style="background-image: url('images/slide2.jpg');">
+				<div class="swiper-slide" data-swiper-autoplay="3000"
+					style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)),  url('images/slide2.jpg');">
 					<div class="title">Slide 2</div>
 					<div class="subtitle">Subtitle</div>
 				</div>
-				<div class="swiper-slide" data-swiper-autoplay="3000" style="background-image: url('images/slide3.jpg');">
+				<div class="swiper-slide" data-swiper-autoplay="3000"
+					style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)),  url('images/slide3.jpg');">
 					<div class="title">Slide 3</div>
 					<div class="subtitle">Subtitle</div>
 				</div>
 			</div>
 			<!-- Add Pagination -->
-			<div class="swiper-pagination swiper-pagination-white"></div>
-			<!-- Add Navigation -->
-			<div class="swiper-button-prev swiper-button-white">
-				<!-- <div>
-											<img src="images/slide1.jpg" alt="" srcset="" width="100" height="100">
-									</div> -->
+			<div class="swiper-pagination swiper-pagination-white">
+
 			</div>
-			<div class="swiper-button-next swiper-button-white"></div>
+			<!-- Add Navigation -->
+			<div class="prev-btn swiper-button-prev">
+				<img src="images/slide1.jpg" alt="">
+			</div>
+			<div class="next-btn swiper-button-next">
+				<img src="images/slide1.jpg" alt="">
+			</div>
 		</div>
 	</div>
 	<section class="updates mt-5">
@@ -513,6 +520,11 @@
 			<!--social_footer_ul ends here-->
 		</div>
 	</footer>
+	<div class="to-top-link">
+		<a href="#page-wrapper" class="top-link">
+			<i class="fas fa-arrow-up"></i>
+		</a>
+	</div>
 	<script src="libs/jquery-3.5.1.js"></script>
 	<script src="libs/popper-2.5.3.js"></script>
 	<script src="libs/bootstrap-4.5.3.js"></script>
@@ -547,6 +559,7 @@
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
+				hideOnClick: false,
 			},
 		});
 
@@ -620,38 +633,145 @@
 		});
 	</script>
 	<script>
-		$(document).ready(function ($) {
+		jQuery(document).ready(function ($) {
 			//set animation timing
-			var animationDelay = 2500;
+			var animationDelay = 2500,
+				//loading bar effect
+				barAnimationDelay = 3800,
+				barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
+				//letters effect
+				lettersDelay = 50,
+				//type effect
+				typeLettersDelay = 150,
+				selectionDuration = 500,
+				typeAnimationDelay = selectionDuration + 800,
+				//clip effect 
+				revealDuration = 600,
+				revealAnimationDelay = 1500;
 
 			initHeadline();
 
+
 			function initHeadline() {
+				//insert <i> element for each letter of a changing word
+				singleLetters($('.cd-headline.letters').find('b'));
 				//initialise headline animation
 				animateHeadline($('.cd-headline'));
 			}
 
-			function animateHeadline($headline) {
+			function singleLetters($words) {
+				$words.each(function () {
+					var word = $(this),
+						letters = word.text().split(''),
+						selected = word.hasClass('is-visible');
+					for (i in letters) {
+						if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
+						letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
+					}
+					var newLetters = letters.join('');
+					word.html(newLetters).css('opacity', 1);
+				});
+			}
+
+			function animateHeadline($headlines) {
 				var duration = animationDelay;
-				//assign to .cd-words-wrapper the width of its longest word
-				// var words = $headline.find('.cd-words-wrapper b'),
-				// 	width = 0;
-				// words.each(function () {
-				// 	var wordWidth = $(this).width();
-				// 	if (wordWidth > width) width = wordWidth;
-				// });
-				// $headline.find('.cd-words-wrapper').css('width', width);
-				// //trigger animation
-				setTimeout(function () {
-					hideWord($headline.find('.is-visible').eq(0))
-				}, duration);
+				$headlines.each(function () {
+					var headline = $(this);
+
+					if (headline.hasClass('loading-bar')) {
+						duration = barAnimationDelay;
+						setTimeout(function () { headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
+					} else if (headline.hasClass('clip')) {
+						var spanWrapper = headline.find('.cd-words-wrapper'),
+							newWidth = spanWrapper.width() + 10
+						spanWrapper.css('width', newWidth);
+					} else if (!headline.hasClass('type')) {
+						//assign to .cd-words-wrapper the width of its longest word
+						var words = headline.find('.cd-words-wrapper b'),
+							width = 0;
+						words.each(function () {
+							var wordWidth = $(this).width();
+							if (wordWidth > width) width = wordWidth;
+						});
+						headline.find('.cd-words-wrapper').css('width', width);
+					};
+
+					//trigger animation
+					setTimeout(function () { hideWord(headline.find('.is-visible').eq(0)) }, duration);
+				});
 			}
 
 			function hideWord($word) {
 				var nextWord = takeNext($word);
 
-				switchWord($word, nextWord);
-				setTimeout(function () { hideWord(nextWord) }, animationDelay);
+				if ($word.parents('.cd-headline').hasClass('type')) {
+					var parentSpan = $word.parent('.cd-words-wrapper');
+					parentSpan.addClass('selected').removeClass('waiting');
+					setTimeout(function () {
+						parentSpan.removeClass('selected');
+						$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
+					}, selectionDuration);
+					setTimeout(function () { showWord(nextWord, typeLettersDelay) }, typeAnimationDelay);
+
+				} else if ($word.parents('.cd-headline').hasClass('letters')) {
+					var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
+					hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
+					showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
+
+				} else if ($word.parents('.cd-headline').hasClass('clip')) {
+					$word.parents('.cd-words-wrapper').animate({ width: '2px' }, revealDuration, function () {
+						switchWord($word, nextWord);
+						showWord(nextWord);
+					});
+
+				} else if ($word.parents('.cd-headline').hasClass('loading-bar')) {
+					$word.parents('.cd-words-wrapper').removeClass('is-loading');
+					switchWord($word, nextWord);
+					setTimeout(function () { hideWord(nextWord) }, barAnimationDelay);
+					setTimeout(function () { $word.parents('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
+
+				} else {
+					switchWord($word, nextWord);
+					setTimeout(function () { hideWord(nextWord) }, animationDelay);
+				}
+			}
+
+			function showWord($word, $duration) {
+				if ($word.parents('.cd-headline').hasClass('type')) {
+					showLetter($word.find('i').eq(0), $word, false, $duration);
+					$word.addClass('is-visible').removeClass('is-hidden');
+
+				} else if ($word.parents('.cd-headline').hasClass('clip')) {
+					$word.parents('.cd-words-wrapper').animate({ 'width': $word.width() + 10 }, revealDuration, function () {
+						setTimeout(function () { hideWord($word) }, revealAnimationDelay);
+					});
+				}
+			}
+
+			function hideLetter($letter, $word, $bool, $duration) {
+				$letter.removeClass('in').addClass('out');
+
+				if (!$letter.is(':last-child')) {
+					setTimeout(function () { hideLetter($letter.next(), $word, $bool, $duration); }, $duration);
+				} else if ($bool) {
+					setTimeout(function () { hideWord(takeNext($word)) }, animationDelay);
+				}
+
+				if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
+					var nextWord = takeNext($word);
+					switchWord($word, nextWord);
+				}
+			}
+
+			function showLetter($letter, $word, $bool, $duration) {
+				$letter.addClass('in').removeClass('out');
+
+				if (!$letter.is(':last-child')) {
+					setTimeout(function () { showLetter($letter.next(), $word, $bool, $duration); }, $duration);
+				} else {
+					if ($word.parents('.cd-headline').hasClass('type')) { setTimeout(function () { $word.parents('.cd-words-wrapper').addClass('waiting'); }, 200); }
+					if (!$bool) { setTimeout(function () { hideWord($word) }, animationDelay) }
+				}
 			}
 
 			function takeNext($word) {
@@ -667,6 +787,50 @@
 				$newWord.removeClass('is-hidden').addClass('is-visible');
 			}
 		});
+	</script>
+	<script>
+		// ********** smooth scroll ************
+		$(document).ready(() => {
+			$(window).scroll(() => {
+				console.log($(window).scrollTop());
+				if ($(window).scrollTop() >= 500) {
+					console.log($('.to-top-link'));
+					$('.to-top-link').addClass('show-link');
+				} else {
+					$('.to-top-link').removeClass('show-link');
+				}
+			});
+
+			$('.to-top-link').click(() => {
+				$(window).scrollTo({
+					// left: 0,
+					top: 0,
+				});
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(() => {
+			var navImg = $('.navbar-brand');
+			console.log(navImg);
+			if ($(window).width() < 992) {
+				comment(navImg);
+				$(".wrapper-elm").appendTo(".navbar-brand");
+			}
+			else {
+				uncomment(navImg);
+				$(".wrapper-elm").appendTo(".wrapper");
+			}
+		});
+
+		function comment(element) {
+			element.html('<!--' + element.html() + '-->')
+		}
+
+		function uncomment(element) {
+			var len = element.html().length;
+			element.html(element.html().substring(4, len - 3))
+		}
 	</script>
 </body>
 
