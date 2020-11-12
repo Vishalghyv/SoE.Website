@@ -972,3 +972,14 @@ footer p {
   height: 20px;
   text-align: center;
 }
+
+
+.notice {
+  cursor: pointer;
+  color: black;
+}
+
+.notice:hover {
+  color: black;
+}
+
