@@ -1,3 +1,22 @@
+<?php
+
+	$conn = mysqli_connect("localhost","root", "", "SOE");
+    if ($conn-> connect_error) {
+        die("Connection failed:".$conn-> connect_error);
+    }
+    $sql = "CREATE DATABASE IF NOT EXISTS notice;";
+    $conn-> query($sql);
+    $sql = "INSERT INTO notice (information, url, new)
+        VALUES ('Comming from php', 'test1', 0)";
+    $conn-> query($sql);
+    $sql = "INSERT INTO notice (information, url, new)
+        VALUES ('Again from php', 'test2', 1)";
+    $conn-> query($sql);
+    $sql = "SELECT id, information, url, new from notice";
+    $result = $conn-> query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,7 +143,60 @@
 							<a class="nav-link" href="#">Contact Us</a>
 						</li>
 					</ul>
+				<div class="container">
+					<a class="navbar-brand" href="#">
+						<img src="" id="img-navbar" alt="" class="img-fluid">
+					</a>
+					<div class="wrapper"></div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="menu-icon-bar"></span>
+						<span class="menu-icon-bar"></span>
+						<span class="menu-icon-bar"></span>
+					</button>
+	
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Programmes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Admission</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Faculty</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Research</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Events</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Clubs</a>
+									<a class="dropdown-item" href="#">Start Up</a>
+									<a class="dropdown-item" href="#">Research</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Facilities</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Gallary</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Contact Us</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+				
 			</nav>
 		</div>
 	</header>
@@ -221,14 +293,17 @@
 				<div class="col-12 mt-4">
 					<div class="well font-weight-bold h6" style="max-height: 216px;overflow: auto;">
 						<ul class="list-group checked-list-box">
-							<li class="list-group-item" style="background-color: #FAF0E6">Date Sheet 1st Mid Term Examinations
-								(Academic Year 2020-21)</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">Academic Calendar for Monsoon Semester,
-								Academic Year 2020-21</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">List of courses being offered in Monsoon
-								Semester 2020</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">Time Table of Monsoon Semester 2020</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">Time Table of Monsoon Semester 2020</li>
+                            <?php
+                                if($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        $new = "";
+                                        if($row['new']) {
+                                            $new = "<span>This is New Symbol</span>";
+                                        }
+                                        echo "<li class='list-group-item' style='background-color: #FAF0E6'> <a class='notice' href='".$row["url"].".php'>" . $row["information"] ." ". $new."</a></li>";
+                                    }
+                                }
+                            ?>
 						</ul>
 					</div>
 				</div>
@@ -591,7 +666,8 @@
 		$(document).ready(function () {
 			if ($(window).width() <= 768) {
 				// $('.navbar-brand img').attr('src', 'images/jnu-logo.png');
-				$(".logo-container img").attr('src', 'images/jnuLogo.png');
+				$(".logo-container img").attr('src', 'images/jnuLogo.png'); // ??
+				$("#img-navbar").attr('src', 'images/jnuLogo.png')
 			}
 		})
 	</script>
@@ -600,10 +676,15 @@
 		console.log(hoheader);
 		$(function ($) {
 			$(window).on('scroll', function () {
-				if ($(this).scrollTop() >= 200) {
+				if ($(this).scrollTop() >= 225) {
 					$('.navbar').addClass('fixed-top');
-				} else if ($(this).scrollTop() <= (200 - hoheader)) {
+					$("#img-navbar").attr('src', 'images/jnuLogo.png')
+
+				} else if ($(this).scrollTop() <= (225 - hoheader)) {
 					$('.navbar').removeClass('fixed-top');
+					if ($(window).width() >= 768)
+					$("#img-navbar").attr('src', '');
+					
 				}
 			});
 
