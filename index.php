@@ -1,3 +1,22 @@
+<?php
+
+	$conn = mysqli_connect("localhost","root", "", "SOE");
+    if ($conn-> connect_error) {
+        die("Connection failed:".$conn-> connect_error);
+    }
+    $sql = "CREATE DATABASE IF NOT EXISTS notice;";
+    $conn-> query($sql);
+    $sql = "INSERT INTO notice (information, url, new)
+        VALUES ('Comming from php', 'test1', 0)";
+    $conn-> query($sql);
+    $sql = "INSERT INTO notice (information, url, new)
+        VALUES ('Again from php', 'test2', 1)";
+    $conn-> query($sql);
+    $sql = "SELECT id, information, url, new from notice";
+    $result = $conn-> query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -217,14 +236,17 @@
 				<div class="col-12 mt-4">
 					<div class="well font-weight-bold h6" style="max-height: 216px;overflow: auto;">
 						<ul class="list-group checked-list-box">
-							<li class="list-group-item" style="background-color: #FAF0E6">Date Sheet 1st Mid Term Examinations
-								(Academic Year 2020-21)</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">Academic Calendar for Monsoon Semester,
-								Academic Year 2020-21</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">List of courses being offered in Monsoon
-								Semester 2020</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">Time Table of Monsoon Semester 2020</li>
-							<li class="list-group-item" style="background-color: #FAF0E6 ">Time Table of Monsoon Semester 2020</li>
+                            <?php
+                                if($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        $new = "";
+                                        if($row['new']) {
+                                            $new = "<span>This is New Symbol</span>";
+                                        }
+                                        echo "<li class='list-group-item' style='background-color: #FAF0E6'> <a class='notice' href='".$row["url"].".php'>" . $row["information"] ." ". $new."</a></li>";
+                                    }
+                                }
+                            ?>
 						</ul>
 					</div>
 				</div>
