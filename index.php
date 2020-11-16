@@ -1,19 +1,19 @@
 <?php
 
-	$conn = mysqli_connect("localhost","root", "", "SOE");
-    if ($conn-> connect_error) {
-        die("Connection failed:".$conn-> connect_error);
-    }
-    $sql = "CREATE DATABASE IF NOT EXISTS notice;";
-    $conn-> query($sql);
-    $sql = "INSERT INTO notice (information, url, new)
+$conn = mysqli_connect("localhost", "root", "", "SOE");
+if ($conn->connect_error) {
+	die("Connection failed:" . $conn->connect_error);
+}
+$sql = "CREATE DATABASE IF NOT EXISTS notice;";
+$conn->query($sql);
+$sql = "INSERT INTO notice (information, url, new)
         VALUES ('Comming from php', 'test1', 0)";
-    $conn-> query($sql);
-    $sql = "INSERT INTO notice (information, url, new)
+$conn->query($sql);
+$sql = "INSERT INTO notice (information, url, new)
         VALUES ('Again from php', 'test2', 1)";
-    $conn-> query($sql);
-    $sql = "SELECT id, information, url, new from notice";
-    $result = $conn-> query($sql);
+$conn->query($sql);
+$sql = "SELECT id, information, url, new from notice";
+$result = $conn->query($sql);
 
 ?>
 
@@ -97,8 +97,7 @@
 				<a class="navbar-brand" href="#">
 					<img src="images/jnuLogo.png" alt="" class="img-fluid">
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="menu-icon-bar"></span>
 					<span class="menu-icon-bar"></span>
 					<span class="menu-icon-bar"></span>
@@ -125,8 +124,7 @@
 							<a class="nav-link" href="#">Events</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
+							<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="#">Clubs</a>
 								<a class="dropdown-item" href="#">Start Up</a>
@@ -143,60 +141,6 @@
 							<a class="nav-link" href="#">Contact Us</a>
 						</li>
 					</ul>
-				<div class="container">
-					<a class="navbar-brand" href="#">
-						<img src="" id="img-navbar" alt="" class="img-fluid">
-					</a>
-					<div class="wrapper"></div>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="menu-icon-bar"></span>
-						<span class="menu-icon-bar"></span>
-						<span class="menu-icon-bar"></span>
-					</button>
-	
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mr-auto">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Programmes</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Admission</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Faculty</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Research</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Events</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Clubs</a>
-									<a class="dropdown-item" href="#">Start Up</a>
-									<a class="dropdown-item" href="#">Research</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Facilities</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Gallary</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				
 			</nav>
 		</div>
 	</header>
@@ -205,18 +149,15 @@
 		<img src="images/slide1.jpg" alt="" class="bg-img img-fluid" style="position: absolute; z-index: -1;">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"
-					style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)), url('images/slide1.jpg');">
+				<div class="swiper-slide" style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)), url('images/slide1.jpg');">
 					<div class="title">Slide 1</div>
 					<div class="subtitle">Subtitle</div>
 				</div>
-				<div class="swiper-slide" data-swiper-autoplay="3000"
-					style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)),  url('images/slide2.jpg');">
+				<div class="swiper-slide" data-swiper-autoplay="3000" style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)),  url('images/slide2.jpg');">
 					<div class="title">Slide 2</div>
 					<div class="subtitle">Subtitle</div>
 				</div>
-				<div class="swiper-slide" data-swiper-autoplay="3000"
-					style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)),  url('images/slide3.jpg');">
+				<div class="swiper-slide" data-swiper-autoplay="3000" style="background-image: linear-gradient(rgba(63,208,212,0.5),rgba(0,0,0,0.7)),  url('images/slide3.jpg');">
 					<div class="title">Slide 3</div>
 					<div class="subtitle">Subtitle</div>
 				</div>
@@ -248,9 +189,7 @@
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-8 events pt-1 ml-2 ml-md-0">
-								<p><a href="" class="typewrite" data-period="2000"
-										data-type='[ "Hi, we are from JNU.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'><span
-											class="wrap"></span></a>
+								<p><a href="" class="typewrite" data-period="2000" data-type='[ "Hi, we are from JNU.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'><span class="wrap"></span></a>
 								</p>
 							</div>
 						</div>
@@ -293,17 +232,17 @@
 				<div class="col-12 mt-4">
 					<div class="well font-weight-bold h6" style="max-height: 216px;overflow: auto;">
 						<ul class="list-group checked-list-box">
-                            <?php
-                                if($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()) {
-                                        $new = "";
-                                        if($row['new']) {
-                                            $new = "<span>This is New Symbol</span>";
-                                        }
-                                        echo "<li class='list-group-item' style='background-color: #FAF0E6'> <a class='notice' href='".$row["url"].".php'>" . $row["information"] ." ". $new."</a></li>";
-                                    }
-                                }
-                            ?>
+							<?php
+							if ($result->num_rows > 0) {
+								while ($row = $result->fetch_assoc()) {
+									$new = "";
+									if ($row['new']) {
+										$new = "<span>This is New Symbol</span>";
+									}
+									echo "<li class='list-group-item' style='background-color: #FAF0E6'> <a class='notice' href='" . $row["url"] . ".php'>" . $row["information"] . " " . $new . "</a></li>";
+								}
+							}
+							?>
 						</ul>
 					</div>
 				</div>
@@ -361,9 +300,7 @@
 					<div class="owl-carousel owl-theme owl-4">
 						<div class="blog_item">
 							<div class="blog_image">
-								<img class="img-fluid"
-									src="https://cdn.pixabay.com/photo/2019/03/10/18/31/hong-kong-4046913_960_720.jpg"
-									alt="images not found">
+								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2019/03/10/18/31/hong-kong-4046913_960_720.jpg" alt="images not found">
 								<span><i class="icon ion-md-create"></i></span>
 							</div>
 							<div class="blog_details">
@@ -377,8 +314,7 @@
 						</div>
 						<div class="blog_item">
 							<div class="blog_image">
-								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/07/09/22/45/tree-838667_960_720.jpg"
-									alt="images not found">
+								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/07/09/22/45/tree-838667_960_720.jpg" alt="images not found">
 								<span><i class="icon ion-md-create"></i></span>
 							</div>
 							<div class="blog_details">
@@ -392,8 +328,7 @@
 						</div>
 						<div class="blog_item">
 							<div class="blog_image">
-								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_960_720.jpg"
-									alt="images not found">
+								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_960_720.jpg" alt="images not found">
 								<span><i class="icon ion-md-create"></i></span>
 							</div>
 							<div class="blog_details">
@@ -564,10 +499,7 @@
 					</div>
 				</div>
 				<div class="col col-md-4 p-0 d-flex align-items-center justify-content-center">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9830929899003!2d77.16402671440491!3d28.540227895004897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dc0ea0183b7%3A0xefd8d19ac7f061e7!2sJawaharlal%20Nehru%20University!5e0!3m2!1sen!2sin!4v1604925043200!5m2!1sen!2sin"
-						width="350" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-						tabindex="0"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9830929899003!2d77.16402671440491!3d28.540227895004897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dc0ea0183b7%3A0xefd8d19ac7f061e7!2sJawaharlal%20Nehru%20University!5e0!3m2!1sen!2sin!4v1604925043200!5m2!1sen!2sin" width="350" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
 			</div>
 		</div>
@@ -611,10 +543,10 @@
 
 	<!-- Initialize Swiper -->
 	<script>
-		window.onresize = function () {
+		window.onresize = function() {
 			location.reload();
 		}
-		window.onload = function () {
+		window.onload = function() {
 			setTransform();
 		}
 		var swiper = new Swiper('.swiper-container', {
@@ -663,7 +595,7 @@
 		console.log(h);
 	</script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			if ($(window).width() <= 768) {
 				// $('.navbar-brand img').attr('src', 'images/jnu-logo.png');
 				$(".logo-container img").attr('src', 'images/jnuLogo.png'); // ??
@@ -672,19 +604,14 @@
 		})
 	</script>
 	<script>
-		var hoheader = document.querySelector(".navbar").offsetHeight;
+		var hoheader = document.querySelector(".header-top").offsetHeight + document.querySelector(".header-middle").offsetHeight;
 		console.log(hoheader);
-		$(function ($) {
-			$(window).on('scroll', function () {
-				if ($(this).scrollTop() >= 225) {
+		$(function($) {
+			$(window).on('scroll', function() {
+				if ($(this).scrollTop() >= hoheader) {
 					$('.navbar').addClass('fixed-top');
-					$("#img-navbar").attr('src', 'images/jnuLogo.png')
-
-				} else if ($(this).scrollTop() <= (225 - hoheader)) {
+				} else if ($(this).scrollTop() < hoheader) {
 					$('.navbar').removeClass('fixed-top');
-					if ($(window).width() >= 768)
-					$("#img-navbar").attr('src', '');
-					
 				}
 			});
 
@@ -694,12 +621,12 @@
 					dropdownMenu = $('.dropdown-menu');
 
 				if (winWidth >= 768) {
-					dropdown.on('mouseenter', function () {
+					dropdown.on('mouseenter', function() {
 						$(this).addClass('show')
 							.children(dropdownMenu).addClass('show');
 					});
 
-					dropdown.on('mouseleave', function () {
+					dropdown.on('mouseleave', function() {
 						$(this).removeClass('show')
 							.children(dropdownMenu).removeClass('show');
 					});
@@ -714,7 +641,7 @@
 		});
 	</script>
 	<script>
-		jQuery(document).ready(function ($) {
+		jQuery(document).ready(function($) {
 			//set animation timing
 			var animationDelay = 2500,
 				//loading bar effect
@@ -741,7 +668,7 @@
 			}
 
 			function singleLetters($words) {
-				$words.each(function () {
+				$words.each(function() {
 					var word = $(this),
 						letters = word.text().split(''),
 						selected = word.hasClass('is-visible');
@@ -756,12 +683,14 @@
 
 			function animateHeadline($headlines) {
 				var duration = animationDelay;
-				$headlines.each(function () {
+				$headlines.each(function() {
 					var headline = $(this);
 
 					if (headline.hasClass('loading-bar')) {
 						duration = barAnimationDelay;
-						setTimeout(function () { headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
+						setTimeout(function() {
+							headline.find('.cd-words-wrapper').addClass('is-loading')
+						}, barWaiting);
 					} else if (headline.hasClass('clip')) {
 						var spanWrapper = headline.find('.cd-words-wrapper'),
 							newWidth = spanWrapper.width() + 10
@@ -770,7 +699,7 @@
 						//assign to .cd-words-wrapper the width of its longest word
 						var words = headline.find('.cd-words-wrapper b'),
 							width = 0;
-						words.each(function () {
+						words.each(function() {
 							var wordWidth = $(this).width();
 							if (wordWidth > width) width = wordWidth;
 						});
@@ -778,7 +707,9 @@
 					};
 
 					//trigger animation
-					setTimeout(function () { hideWord(headline.find('.is-visible').eq(0)) }, duration);
+					setTimeout(function() {
+						hideWord(headline.find('.is-visible').eq(0))
+					}, duration);
 				});
 			}
 
@@ -788,11 +719,13 @@
 				if ($word.parents('.cd-headline').hasClass('type')) {
 					var parentSpan = $word.parent('.cd-words-wrapper');
 					parentSpan.addClass('selected').removeClass('waiting');
-					setTimeout(function () {
+					setTimeout(function() {
 						parentSpan.removeClass('selected');
 						$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
 					}, selectionDuration);
-					setTimeout(function () { showWord(nextWord, typeLettersDelay) }, typeAnimationDelay);
+					setTimeout(function() {
+						showWord(nextWord, typeLettersDelay)
+					}, typeAnimationDelay);
 
 				} else if ($word.parents('.cd-headline').hasClass('letters')) {
 					var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
@@ -800,7 +733,9 @@
 					showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
 
 				} else if ($word.parents('.cd-headline').hasClass('clip')) {
-					$word.parents('.cd-words-wrapper').animate({ width: '2px' }, revealDuration, function () {
+					$word.parents('.cd-words-wrapper').animate({
+						width: '2px'
+					}, revealDuration, function() {
 						switchWord($word, nextWord);
 						showWord(nextWord);
 					});
@@ -808,12 +743,18 @@
 				} else if ($word.parents('.cd-headline').hasClass('loading-bar')) {
 					$word.parents('.cd-words-wrapper').removeClass('is-loading');
 					switchWord($word, nextWord);
-					setTimeout(function () { hideWord(nextWord) }, barAnimationDelay);
-					setTimeout(function () { $word.parents('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
+					setTimeout(function() {
+						hideWord(nextWord)
+					}, barAnimationDelay);
+					setTimeout(function() {
+						$word.parents('.cd-words-wrapper').addClass('is-loading')
+					}, barWaiting);
 
 				} else {
 					switchWord($word, nextWord);
-					setTimeout(function () { hideWord(nextWord) }, animationDelay);
+					setTimeout(function() {
+						hideWord(nextWord)
+					}, animationDelay);
 				}
 			}
 
@@ -823,8 +764,12 @@
 					$word.addClass('is-visible').removeClass('is-hidden');
 
 				} else if ($word.parents('.cd-headline').hasClass('clip')) {
-					$word.parents('.cd-words-wrapper').animate({ 'width': $word.width() + 10 }, revealDuration, function () {
-						setTimeout(function () { hideWord($word) }, revealAnimationDelay);
+					$word.parents('.cd-words-wrapper').animate({
+						'width': $word.width() + 10
+					}, revealDuration, function() {
+						setTimeout(function() {
+							hideWord($word)
+						}, revealAnimationDelay);
 					});
 				}
 			}
@@ -833,9 +778,13 @@
 				$letter.removeClass('in').addClass('out');
 
 				if (!$letter.is(':last-child')) {
-					setTimeout(function () { hideLetter($letter.next(), $word, $bool, $duration); }, $duration);
+					setTimeout(function() {
+						hideLetter($letter.next(), $word, $bool, $duration);
+					}, $duration);
 				} else if ($bool) {
-					setTimeout(function () { hideWord(takeNext($word)) }, animationDelay);
+					setTimeout(function() {
+						hideWord(takeNext($word))
+					}, animationDelay);
 				}
 
 				if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
@@ -848,10 +797,20 @@
 				$letter.addClass('in').removeClass('out');
 
 				if (!$letter.is(':last-child')) {
-					setTimeout(function () { showLetter($letter.next(), $word, $bool, $duration); }, $duration);
+					setTimeout(function() {
+						showLetter($letter.next(), $word, $bool, $duration);
+					}, $duration);
 				} else {
-					if ($word.parents('.cd-headline').hasClass('type')) { setTimeout(function () { $word.parents('.cd-words-wrapper').addClass('waiting'); }, 200); }
-					if (!$bool) { setTimeout(function () { hideWord($word) }, animationDelay) }
+					if ($word.parents('.cd-headline').hasClass('type')) {
+						setTimeout(function() {
+							$word.parents('.cd-words-wrapper').addClass('waiting');
+						}, 200);
+					}
+					if (!$bool) {
+						setTimeout(function() {
+							hideWord($word)
+						}, animationDelay)
+					}
 				}
 			}
 
@@ -890,29 +849,7 @@
 			});
 		});
 	</script>
-	<script>
-		$(document).ready(() => {
-			var navImg = $('.navbar-brand');
-			console.log(navImg);
-			if ($(window).width() < 992) {
-				comment(navImg);
-				$(".wrapper-elm").appendTo(".navbar-brand");
-			}
-			else {
-				uncomment(navImg);
-				$(".wrapper-elm").appendTo(".wrapper");
-			}
-		});
-
-		function comment(element) {
-			element.html('<!--' + element.html() + '-->')
-		}
-
-		function uncomment(element) {
-			var len = element.html().length;
-			element.html(element.html().substring(4, len - 3))
-		}
-	</script>
+	<script src="js/responsive-navbar.js"></script>
 </body>
 
 </html>
