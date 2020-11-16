@@ -116,7 +116,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 80%;
+  width: 95%;
   height: auto;
   background-color: rgb(243, 243, 243);
 }
@@ -126,9 +126,9 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 90px;
-  height: 90px;
-  background-color: #9b8cca;
+  width: 50px;
+  height: 50px;
+  background-color: #0000CC;
   border-radius: 50%;
   transition: 300ms all cubic-bezier(.4, 0, .2, 1);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
@@ -136,8 +136,8 @@ body {
 
 .logo-container .logo-img {
   z-index: 2;
-  width: 70px;
-  height: 70px;
+  width: 37px;
+  height: 37px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
@@ -155,7 +155,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50px;
+  height: 25px;
   width: auto;
 }
 
@@ -174,7 +174,6 @@ body {
 
 .cd-intro {
   position: relative;
-  margin-left: 20px;
   text-align: center;
 }
 
@@ -187,7 +186,7 @@ body {
 .cd-words-wrapper {
   position: relative;
   text-align: left;
-  height: 90px;
+  height: 50px;
 }
 
 .cd-words-wrapper b {
@@ -214,6 +213,7 @@ body {
 .cd-headline.slide span {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: .2em 0;
 }
 
@@ -355,171 +355,6 @@ body {
   }
 } */
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .header-middle {
-    padding: 0;
-  }
-  .wrapper-elm {
-    width: 100%;
-    padding-left: 15px;
-  }
-  .logo-container {
-    width: 60px;
-    height: 60px;
-  }
-  .logo-container .logo-img {
-    width: 40px;
-    height: 40px;
-  }
-  .logo-container .logo-img img{
-    height: 30px !important;
-    width: auto !important;
-  }
-  .cd-words-wrapper {
-    height: 60px;
-  }
-  .cd-words-wrapper b {
-    font-size: 2rem;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .cd-words-wrapper b {
-    font-size: 3rem;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  
-}
-
-/* Swiper Slide */
-
-.swiper-container {
-  position: relative;
-}
-
-.ribbon-wrapper {
-  position: relative;
-}
-
-.swiper-slide {
-  position: relative;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 40px 60px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.swiper-slide .title, .swiper-slide .subtitle {
-  background-color: rgba(255, 255, 255, 0.616);
-  color: black;
-  margin: 0 auto;
-  text-align: center;
-  position: absolute;
-  left: 20%;
-  width: 40%;
-  mix-blend-mode: screen;
-  transition: transform 0.5s linear;
-  transition-delay: 1.5s;
-}
-
-.swiper-slide .title {
-  top: 100%;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.swiper-slide .subtitle {
-  font-size: 1rem;
-  font-weight: 600;
-  bottom: 100%;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) {
-  .swiper-slide {
-    padding: 20px 30px;
-  }
-  .swiper-slide .title, .swiper-slide .subtitle {
-    padding: 10px;
-    left: 10%;
-    width: 40%;
-  }
-  .swiper-slide .title {
-    font-size: 5rem;
-  }
-  .swiper-slide .subtitle {
-    font-size: 3rem;
-  }
-}
-
-/* navigation button */
-
-.prev-btn, .next-btn {
-  position: relative;
-  background: rgba(0, 0, 0, 0.2);
-  width: 70px !important;
-  height: 70px !important;
-  box-shadow: inset 0 0 7px rgb(29 26 26 / 82%);
-  border-radius: 50%;
-}
-
-.prev-btn img, .next-btn img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-  .swiper-slide {
-    padding: 40px 60px;
-  }
-  .swiper-slide .title, .swiper-slide .subtitle {
-    left: 10%;
-    width: 35%;
-  }
-  .swiper-slide .title {
-    font-size: 4rem;
-  }
-  .swiper-slide .subtitle {
-    font-size: 2.5rem;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {
-  .swiper-slide .title {
-    font-size: 6rem;
-  }
-  .swiper-slide .subtitle {
-    font-size: 3rem;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {}
-
 .header-bottom {
   position: relative;
   background-color: #9e81f5;
@@ -650,17 +485,49 @@ body {
   background-color: #c0ca33;
 }
 
+.navbar-brand {
+  margin-left: 0.75rem;
+}
 
-@media screen and (max-width: 768px) {
-  .navbar-brand {
-    margin-left: 20px;
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+  .header-middle {
+    padding: 0;
   }
-  .navbar-nav {
-    padding: 0 20px;
-    background-color: rgba(0, 0, 0, .9);
+  .wrapper-elm {
+    width: 100%;
   }
-  .navbar.fixed-top .navbar-nav {
-    background: transparent;
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  .navbar .navbar-brand img {
+    width: 30px;
+    height: auto;
+  }
+  .wrapper-elm {
+    width: 100%;
+    padding-left: 15px;
+  }
+  .logo-container {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-container .logo-img {
+    width: 47px;
+    height: 47px;
+  }
+  .logo-container .logo-img img {
+    height: 30px;
+    width: auto;
+  }
+  .cd-words-wrapper {
+    height: 60px;
+  }
+  .cd-words-wrapper b {
+    font-size: 2rem;
   }
 }
 
@@ -763,12 +630,153 @@ body {
   }
 }
 
-.navbar .navbar-brand img {
-  width: 30px;
-  height: auto;
+/* End Umesh */
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  .logo-container {
+    margin-right: 10px;
+  }
+  .cd-words-wrapper {
+    height: 90px;
+  }
+  .cd-words-wrapper b {
+    font-size: 3rem;
+  }
+  .header-middle {
+    padding: 10px;
+  }
+  .logo-container {
+    width: 90px;
+    height: 90px;
+  }
+  .logo-container .logo-img {
+    height: 70px;
+    width: 70px;
+  }
+  .logo-container .logo-img img {
+    height: 50px;
+  }
 }
 
-/* End Umesh */
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
+
+/* Swiper Slide */
+
+.swiper-container {
+  position: relative;
+}
+
+.ribbon-wrapper {
+  position: relative;
+}
+
+.swiper-slide {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-slide .title, .swiper-slide .subtitle {
+  background-color: rgba(255, 255, 255, 0.616);
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  width: 40%;
+  mix-blend-mode: screen;
+  transition: transform 0.5s linear;
+  transition-delay: 1.5s;
+}
+
+.swiper-slide .title {
+  top: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.swiper-slide .subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  bottom: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+  .swiper-slide {
+    padding: 20px 30px;
+  }
+  .swiper-slide .title, .swiper-slide .subtitle {
+    padding: 10px;
+    left: 10%;
+    width: 40%;
+  }
+  .swiper-slide .title {
+    font-size: 5rem;
+  }
+  .swiper-slide .subtitle {
+    font-size: 3rem;
+  }
+}
+
+/* navigation button */
+
+.prev-btn, .next-btn {
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  width: 70px !important;
+  height: 70px !important;
+  box-shadow: inset 0 0 7px rgb(29 26 26 / 82%);
+  border-radius: 50%;
+}
+
+.prev-btn img, .next-btn img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    padding: 40px 60px;
+  }
+  .swiper-slide .title, .swiper-slide .subtitle {
+    left: 10%;
+    width: 35%;
+  }
+  .swiper-slide .title {
+    font-size: 4rem;
+  }
+  .swiper-slide .subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  .swiper-slide .title {
+    font-size: 6rem;
+  }
+  .swiper-slide .subtitle {
+    font-size: 3rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
 
 /* Ajay */
 
@@ -1190,4 +1198,3 @@ footer p {
 .notice:hover {
   color: black;
 }
-
