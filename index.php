@@ -38,7 +38,8 @@ $result = $conn->query($sql);
 	<!-- bootstrap-4 css -->
 	<link rel="stylesheet" href="libs/bootstrap-4.5.3.css">
 	<!-- main css -->
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
+	<!-- <link rel="stylesheet" href="css/styles.css"> -->
 	<!-- swiper.js css -->
 	<link rel="stylesheet" href="css/swiper-bundle-min.css">
 	<!-- <link rel="stylesheet" href="css/swiper-bundle.css"> -->
@@ -233,7 +234,7 @@ $result = $conn->query($sql);
 					<div class="well font-weight-bold h6" style="max-height: 216px;overflow: auto;">
 						<ul class="list-group checked-list-box">
 							<?php
-							if ($result->num_rows > 0) {
+							if ($result && $result->num_rows) {
 								while ($row = $result->fetch_assoc()) {
 									$new = "";
 									if ($row['new']) {
@@ -577,8 +578,8 @@ $result = $conn->query($sql);
 			let title = curSlide.querySelector('.title');
 			let subtitle = curSlide.querySelector('.subtitle');
 
-			let moveUp = String(-0.5 * h - title.offsetHeight + 40) + 'px';
-			let moveDown = String(0.5 * h + subtitle.offsetHeight + 40) + 'px';
+			let moveUp = String(-0.5 * h - title.offsetHeight) + 'px';
+			let moveDown = String(0.5 * h + subtitle.offsetHeight) + 'px';
 
 
 			title.style.transform = `translateY(${moveUp})`;
@@ -594,262 +595,239 @@ $result = $conn->query($sql);
 		document.querySelector('.swiper-container').style.height = h + 'px';
 		console.log(h);
 	</script>
-	<script>
-		$(document).ready(function() {
-			if ($(window).width() <= 768) {
-				// $('.navbar-brand img').attr('src', 'images/jnu-logo.png');
-				$(".logo-container img").attr('src', 'images/jnuLogo.png'); // ??
-				$("#img-navbar").attr('src', 'images/jnuLogo.png')
-			}
-		})
-	</script>
+	<!-- Navbar sticky-top -->
 	<script>
 		var hoheader = document.querySelector(".header-top").offsetHeight + document.querySelector(".header-middle").offsetHeight;
 		console.log(hoheader);
 		$(function($) {
-			$(window).on('scroll', function() {
-				if ($(this).scrollTop() >= hoheader) {
-					$('.navbar').addClass('fixed-top');
-				} else if ($(this).scrollTop() < hoheader) {
-					$('.navbar').removeClass('fixed-top');
-				}
+		$(window).on('scroll', function() {
+		if ($(this).scrollTop() >= hoheader) {
+		$('.navbar').addClass('fixed-top');
+		} else if ($(this).scrollTop() < hoheader) { $('.navbar').removeClass('fixed-top'); } }); function adjustNav() { var winWidth=$(window).width(), dropdown=$('.dropdown'), dropdownMenu=$('.dropdown-menu'); if (winWidth>= 768) {
+			dropdown.on('mouseenter', function() {
+			$(this).addClass('show')
+			.children(dropdownMenu).addClass('show');
 			});
 
-			function adjustNav() {
-				var winWidth = $(window).width(),
-					dropdown = $('.dropdown'),
-					dropdownMenu = $('.dropdown-menu');
-
-				if (winWidth >= 768) {
-					dropdown.on('mouseenter', function() {
-						$(this).addClass('show')
-							.children(dropdownMenu).addClass('show');
-					});
-
-					dropdown.on('mouseleave', function() {
-						$(this).removeClass('show')
-							.children(dropdownMenu).removeClass('show');
-					});
-				} else {
-					dropdown.off('mouseenter mouseleave');
-				}
+			dropdown.on('mouseleave', function() {
+			$(this).removeClass('show')
+			.children(dropdownMenu).removeClass('show');
+			});
+			} else {
+			dropdown.off('mouseenter mouseleave');
+			}
 			}
 
 			$(window).on('resize', adjustNav);
 
 			adjustNav();
-		});
-	</script>
-	<script>
-		jQuery(document).ready(function($) {
-			//set animation timing
-			var animationDelay = 2500,
-				//loading bar effect
-				barAnimationDelay = 3800,
-				barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
-				//letters effect
-				lettersDelay = 50,
-				//type effect
-				typeLettersDelay = 150,
-				selectionDuration = 500,
-				typeAnimationDelay = selectionDuration + 800,
-				//clip effect 
-				revealDuration = 600,
-				revealAnimationDelay = 1500;
+			});
+			</script>
+			<!-- text animation -->
+			<script>
+				jQuery(document).ready(function($) {
+					//set animation timing
+					var animationDelay = 2500,
+						//loading bar effect
+						barAnimationDelay = 3800,
+						barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
+						//letters effect
+						lettersDelay = 50,
+						//type effect
+						typeLettersDelay = 150,
+						selectionDuration = 500,
+						typeAnimationDelay = selectionDuration + 800,
+						//clip effect 
+						revealDuration = 600,
+						revealAnimationDelay = 1500;
 
-			initHeadline();
+					initHeadline();
 
 
-			function initHeadline() {
-				//insert <i> element for each letter of a changing word
-				singleLetters($('.cd-headline.letters').find('b'));
-				//initialise headline animation
-				animateHeadline($('.cd-headline'));
-			}
-
-			function singleLetters($words) {
-				$words.each(function() {
-					var word = $(this),
-						letters = word.text().split(''),
-						selected = word.hasClass('is-visible');
-					for (i in letters) {
-						if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
-						letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
+					function initHeadline() {
+						//insert <i> element for each letter of a changing word
+						singleLetters($('.cd-headline.letters').find('b'));
+						//initialise headline animation
+						animateHeadline($('.cd-headline'));
 					}
-					var newLetters = letters.join('');
-					word.html(newLetters).css('opacity', 1);
-				});
-			}
 
-			function animateHeadline($headlines) {
-				var duration = animationDelay;
-				$headlines.each(function() {
-					var headline = $(this);
-
-					if (headline.hasClass('loading-bar')) {
-						duration = barAnimationDelay;
-						setTimeout(function() {
-							headline.find('.cd-words-wrapper').addClass('is-loading')
-						}, barWaiting);
-					} else if (headline.hasClass('clip')) {
-						var spanWrapper = headline.find('.cd-words-wrapper'),
-							newWidth = spanWrapper.width() + 10
-						spanWrapper.css('width', newWidth);
-					} else if (!headline.hasClass('type')) {
-						//assign to .cd-words-wrapper the width of its longest word
-						var words = headline.find('.cd-words-wrapper b'),
-							width = 0;
-						words.each(function() {
-							var wordWidth = $(this).width();
-							if (wordWidth > width) width = wordWidth;
+					function singleLetters($words) {
+						$words.each(function() {
+							var word = $(this),
+								letters = word.text().split(''),
+								selected = word.hasClass('is-visible');
+							for (i in letters) {
+								if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
+								letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
+							}
+							var newLetters = letters.join('');
+							word.html(newLetters).css('opacity', 1);
 						});
-						headline.find('.cd-words-wrapper').css('width', width);
-					};
-
-					//trigger animation
-					setTimeout(function() {
-						hideWord(headline.find('.is-visible').eq(0))
-					}, duration);
-				});
-			}
-
-			function hideWord($word) {
-				var nextWord = takeNext($word);
-
-				if ($word.parents('.cd-headline').hasClass('type')) {
-					var parentSpan = $word.parent('.cd-words-wrapper');
-					parentSpan.addClass('selected').removeClass('waiting');
-					setTimeout(function() {
-						parentSpan.removeClass('selected');
-						$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
-					}, selectionDuration);
-					setTimeout(function() {
-						showWord(nextWord, typeLettersDelay)
-					}, typeAnimationDelay);
-
-				} else if ($word.parents('.cd-headline').hasClass('letters')) {
-					var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
-					hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
-					showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
-
-				} else if ($word.parents('.cd-headline').hasClass('clip')) {
-					$word.parents('.cd-words-wrapper').animate({
-						width: '2px'
-					}, revealDuration, function() {
-						switchWord($word, nextWord);
-						showWord(nextWord);
-					});
-
-				} else if ($word.parents('.cd-headline').hasClass('loading-bar')) {
-					$word.parents('.cd-words-wrapper').removeClass('is-loading');
-					switchWord($word, nextWord);
-					setTimeout(function() {
-						hideWord(nextWord)
-					}, barAnimationDelay);
-					setTimeout(function() {
-						$word.parents('.cd-words-wrapper').addClass('is-loading')
-					}, barWaiting);
-
-				} else {
-					switchWord($word, nextWord);
-					setTimeout(function() {
-						hideWord(nextWord)
-					}, animationDelay);
-				}
-			}
-
-			function showWord($word, $duration) {
-				if ($word.parents('.cd-headline').hasClass('type')) {
-					showLetter($word.find('i').eq(0), $word, false, $duration);
-					$word.addClass('is-visible').removeClass('is-hidden');
-
-				} else if ($word.parents('.cd-headline').hasClass('clip')) {
-					$word.parents('.cd-words-wrapper').animate({
-						'width': $word.width() + 10
-					}, revealDuration, function() {
-						setTimeout(function() {
-							hideWord($word)
-						}, revealAnimationDelay);
-					});
-				}
-			}
-
-			function hideLetter($letter, $word, $bool, $duration) {
-				$letter.removeClass('in').addClass('out');
-
-				if (!$letter.is(':last-child')) {
-					setTimeout(function() {
-						hideLetter($letter.next(), $word, $bool, $duration);
-					}, $duration);
-				} else if ($bool) {
-					setTimeout(function() {
-						hideWord(takeNext($word))
-					}, animationDelay);
-				}
-
-				if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
-					var nextWord = takeNext($word);
-					switchWord($word, nextWord);
-				}
-			}
-
-			function showLetter($letter, $word, $bool, $duration) {
-				$letter.addClass('in').removeClass('out');
-
-				if (!$letter.is(':last-child')) {
-					setTimeout(function() {
-						showLetter($letter.next(), $word, $bool, $duration);
-					}, $duration);
-				} else {
-					if ($word.parents('.cd-headline').hasClass('type')) {
-						setTimeout(function() {
-							$word.parents('.cd-words-wrapper').addClass('waiting');
-						}, 200);
 					}
-					if (!$bool) {
-						setTimeout(function() {
-							hideWord($word)
-						}, animationDelay)
+
+					function animateHeadline($headlines) {
+						var duration = animationDelay;
+						$headlines.each(function() {
+							var headline = $(this);
+
+							if (headline.hasClass('loading-bar')) {
+								duration = barAnimationDelay;
+								setTimeout(function() {
+									headline.find('.cd-words-wrapper').addClass('is-loading')
+								}, barWaiting);
+							} else if (headline.hasClass('clip')) {
+								var spanWrapper = headline.find('.cd-words-wrapper'),
+									newWidth = spanWrapper.width() + 10
+								spanWrapper.css('width', newWidth);
+							} else if (!headline.hasClass('type')) {
+								//assign to .cd-words-wrapper the width of its longest word
+								var words = headline.find('.cd-words-wrapper b'),
+									width = 0;
+								words.each(function() {
+									var wordWidth = $(this).width();
+									if (wordWidth > width) width = wordWidth;
+								});
+								headline.find('.cd-words-wrapper').css('width', width);
+							};
+
+							//trigger animation
+							setTimeout(function() {
+								hideWord(headline.find('.is-visible').eq(0))
+							}, duration);
+						});
 					}
-				}
-			}
 
-			function takeNext($word) {
-				return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
-			}
+					function hideWord($word) {
+						var nextWord = takeNext($word);
 
-			function takePrev($word) {
-				return (!$word.is(':first-child')) ? $word.prev() : $word.parent().children().last();
-			}
+						if ($word.parents('.cd-headline').hasClass('type')) {
+							var parentSpan = $word.parent('.cd-words-wrapper');
+							parentSpan.addClass('selected').removeClass('waiting');
+							setTimeout(function() {
+								parentSpan.removeClass('selected');
+								$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
+							}, selectionDuration);
+							setTimeout(function() {
+								showWord(nextWord, typeLettersDelay)
+							}, typeAnimationDelay);
 
-			function switchWord($oldWord, $newWord) {
-				$oldWord.removeClass('is-visible').addClass('is-hidden');
-				$newWord.removeClass('is-hidden').addClass('is-visible');
-			}
-		});
-	</script>
-	<script>
-		// ********** smooth scroll ************
-		$(document).ready(() => {
-			$(window).scroll(() => {
-				console.log($(window).scrollTop());
-				if ($(window).scrollTop() >= 500) {
-					console.log($('.to-top-link'));
-					$('.to-top-link').addClass('show-link');
-				} else {
-					$('.to-top-link').removeClass('show-link');
-				}
-			});
+						} else if ($word.parents('.cd-headline').hasClass('letters')) {
+							var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
+							hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
+							showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
 
-			$('.to-top-link').click(() => {
-				$(window).scrollTo({
-					// left: 0,
-					top: 0,
+						} else if ($word.parents('.cd-headline').hasClass('clip')) {
+							$word.parents('.cd-words-wrapper').animate({
+								width: '2px'
+							}, revealDuration, function() {
+								switchWord($word, nextWord);
+								showWord(nextWord);
+							});
+
+						} else if ($word.parents('.cd-headline').hasClass('loading-bar')) {
+							$word.parents('.cd-words-wrapper').removeClass('is-loading');
+							switchWord($word, nextWord);
+							setTimeout(function() {
+								hideWord(nextWord)
+							}, barAnimationDelay);
+							setTimeout(function() {
+								$word.parents('.cd-words-wrapper').addClass('is-loading')
+							}, barWaiting);
+
+						} else {
+							switchWord($word, nextWord);
+							setTimeout(function() {
+								hideWord(nextWord)
+							}, animationDelay);
+						}
+					}
+
+					function showWord($word, $duration) {
+						if ($word.parents('.cd-headline').hasClass('type')) {
+							showLetter($word.find('i').eq(0), $word, false, $duration);
+							$word.addClass('is-visible').removeClass('is-hidden');
+
+						} else if ($word.parents('.cd-headline').hasClass('clip')) {
+							$word.parents('.cd-words-wrapper').animate({
+								'width': $word.width() + 10
+							}, revealDuration, function() {
+								setTimeout(function() {
+									hideWord($word)
+								}, revealAnimationDelay);
+							});
+						}
+					}
+
+					function hideLetter($letter, $word, $bool, $duration) {
+						$letter.removeClass('in').addClass('out');
+
+						if (!$letter.is(':last-child')) {
+							setTimeout(function() {
+								hideLetter($letter.next(), $word, $bool, $duration);
+							}, $duration);
+						} else if ($bool) {
+							setTimeout(function() {
+								hideWord(takeNext($word))
+							}, animationDelay);
+						}
+
+						if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
+							var nextWord = takeNext($word);
+							switchWord($word, nextWord);
+						}
+					}
+
+					function showLetter($letter, $word, $bool, $duration) {
+						$letter.addClass('in').removeClass('out');
+
+						if (!$letter.is(':last-child')) {
+							setTimeout(function() {
+								showLetter($letter.next(), $word, $bool, $duration);
+							}, $duration);
+						} else {
+							if ($word.parents('.cd-headline').hasClass('type')) {
+								setTimeout(function() {
+									$word.parents('.cd-words-wrapper').addClass('waiting');
+								}, 200);
+							}
+							if (!$bool) {
+								setTimeout(function() {
+									hideWord($word)
+								}, animationDelay)
+							}
+						}
+					}
+
+					function takeNext($word) {
+						return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+					}
+
+					function takePrev($word) {
+						return (!$word.is(':first-child')) ? $word.prev() : $word.parent().children().last();
+					}
+
+					function switchWord($oldWord, $newWord) {
+						$oldWord.removeClass('is-visible').addClass('is-hidden');
+						$newWord.removeClass('is-hidden').addClass('is-visible');
+					}
 				});
-			});
-		});
-	</script>
-	<script src="js/responsive-navbar.js"></script>
+			</script>
+			<!-- smooth scroll -->
+			<script>
+				// ********** smooth scroll ************
+				$(document).ready(() => {
+					$(window).scroll(() => {
+						console.log($(window).scrollTop());
+						if ($(window).scrollTop() >= 500) {
+							console.log($('.to-top-link'));
+							$('.to-top-link').addClass('show-link');
+						} else {
+							$('.to-top-link').removeClass('show-link');
+						}
+					});
+				});
+			</script>
+			<script src="js/responsive-navbar.js"></script>
 </body>
 
 </html>
