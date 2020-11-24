@@ -28,17 +28,15 @@ $result = $conn->query($sql);
 
 	<link rel="icon" href="assets/favicon.ico">
 	<title>School of Engineering &middot; JNU</title>
+
 	<!-- fontawesome icon css -->
 	<link rel="stylesheet" href="fontawesome/css/all.min.css">
 	<!-- google font-family -->
 	<link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Charmonman' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Ceviche One' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
 	<!-- bootstrap-4 css -->
 	<link rel="stylesheet" href="libs/bootstrap-4.5.3.css">
 	<!-- main css -->
-	<link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/index.css?v=<?php echo time(); ?>">
 	<!-- <link rel="stylesheet" href="css/styles.css"> -->
 	<!-- swiper.js css -->
 	<link rel="stylesheet" href="css/swiper-bundle-min.css">
@@ -46,8 +44,6 @@ $result = $conn->query($sql);
 	<!-- owl-corousel css-->
 	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"> -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"> -->
 	<style>
 		html * {
 			-webkit-font-smoothing: antialiased;
@@ -62,6 +58,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
+	<!-- Umesh -->
 	<header class="header" id="page-wrapper">
 		<div class="ribbon-wrapper">
 			<div class="ribbon">Feedback</div>
@@ -176,7 +173,9 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</div>
-	<section class="updates mt-5">
+	<!-- End Umesh -->
+	<!-- Ajay -->
+	<section class="updates mt-3">
 		<div class="container">
 			<div class="section-content">
 				<div class="row">
@@ -199,15 +198,139 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</section>
-	<section class="container mt-5">
+	<section class="container mt-4">
 		<div class="row pt-2">
-			<div class="col-md-6 col-sm-12 bg-bag  ">
+			<div class="col-md-6 col-sm-12 bg-bag">
+				<div class="line mt-3 "></div>
+				<h4 class="ml-4 pt-3">ABOUT <span class="h5 font-weight-bold" style="color: #8B4513;font-family: tahoma;">JNU
+						DELHI</span></h4>
+				<hr class="bg-info ml-4 mt-0" style="width: 250px;">
+				<div class="row p-2 pt-0">
+					<div class="col-md-8">
+						<p>School of Engineering, Jawaharlal Nehru University offers five year dual degree program with B. Tech in
+							engineering discipline combined with a Master specialisation in Social science/Humanities/Science/
+							Technology.
+							In the current scenario, technology is playing a big role in identifying and solving social issues...</p>
+					</div>
+					<div class="col-md-4 pt-3">
+						<img src="images/slide6.jpg" style="display: block;width: 100%;">
+					</div>
+					<button type="button" class="btn btn-sm btn-outline-info ml-3 mt-1" data-toggle="modal" data-target="#jnuModal">Read More
+					</button>
+				</div>
+
+				<!-- jnu modal -->
+				<div class="modal fade" id="jnuModal" tabindex="-1" role="dialog" aria-labelledby="jnuModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="ml-4 pt-3 modal-title" id="jnuModalLabel">SCHOOL OF ENGINEERING <span class="h5 font-weight-bold" style="color: #8B4513;font-family: tahoma;">JNU</span></h4>
+								<hr class="bg-info ml-4 mt-0" style="width: 400px;">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-8">
+										School of Engineering, Jawaharlal Nehru University offers five year dual degree program with B. Tech
+										in engineering discipline combined with a Master specialisation in Social
+										science/Humanities/Science/Technology.<br>
+										In the current scenario, technology is playing a big role in identifying and solving social issues.
+										Keeping this point in mind, School of Engineering gives its students an opportunity to explore
+										various disciplines of social sciences along with the Engineering program. The program is unique in
+										nature and first of its kind in India.<br>
+										Established in 2018, School of Engineering is in its emerging stage. But, with the help of
+										infrastructure of Jawaharlal Nehru University, its worldwide legacy in the field of Science and
+										Social Science and its well grown schools, School of Engineering is determined to be a fore-runner
+										in cutting edge technology, research, and education. At present, School of Engineering offers degree
+										in two engineering disciplines, viz., Computer Science and Engineering and Electronics and
+										Communication Engineering. However, three more disciplines, viz., Mechanical Engineering, Chemical
+										Engineering, and Civil and Environmental Engineering have been planned to be launched in recent
+										years. The School will start its PhD program from July, 2021.
+									</div>
+									<div class="col-md-4 mt-5">
+										<img src="images/slide6.jpg" style="display: block;width: 100%;">
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="line mt-3 "></div>
+				<h4 class="ml-4 pt-3">DEAN'S <span class="h5 font-weight-bold" style="color: #8B4513;font-family: tahoma;">DESK</span></h4>
+				<hr class="bg-info ml-4 mt-0" style="width: 250px;">
+				<div class="row p-2 pt-0">
+					<div class="col-md-8">
+						<p>School of Engineering, Jawaharlal Nehru University offers five year dual degree program with B. Tech in
+							engineering discipline combined with a Master specialisation in Social science/Humanities/Science/
+							Technology.
+							In the current scenario, technology is playing a big role in identifying and solving social issues...</p>
+					</div>
+					<div class="col-md-4 pt-3">
+						<img src="images/slide5.jpg" style="display: block;width: 100%;">
+					</div>
+					<button type="button" class="btn btn-sm btn-outline-info ml-3 mt-1" data-toggle="modal" data-target="#soeModal">Read More
+					</button>
+				</div>
+
+				<!-- soe modal -->
+				<div class="modal fade" id="soeModal" tabindex="-1" role="dialog" aria-labelledby="soeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="ml-4 pt-3 modal-title" id="soeModalLabel">SCHOOL OF ENGINEERING <span class="h5 font-weight-bold" style="color: #8B4513;font-family: tahoma;">JNU</span></h4>
+								<hr class="bg-info ml-4 mt-0" style="width: 400px;">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-8">
+										School of Engineering, Jawaharlal Nehru University offers five year dual degree program with B. Tech
+										in engineering discipline combined with a Master specialisation in Social
+										science/Humanities/Science/Technology.<br>
+										In the current scenario, technology is playing a big role in identifying and solving social issues.
+										Keeping this point in mind, School of Engineering gives its students an opportunity to explore
+										various disciplines of social sciences along with the Engineering program. The program is unique in
+										nature and first of its kind in India.<br>
+										Established in 2018, School of Engineering is in its emerging stage. But, with the help of
+										infrastructure of Jawaharlal Nehru University, its worldwide legacy in the field of Science and
+										Social Science and its well grown schools, School of Engineering is determined to be a fore-runner
+										in cutting edge technology, research, and education. At present, School of Engineering offers degree
+										in two engineering disciplines, viz., Computer Science and Engineering and Electronics and
+										Communication Engineering. However, three more disciplines, viz., Mechanical Engineering, Chemical
+										Engineering, and Civil and Environmental Engineering have been planned to be launched in recent
+										years. The School will start its PhD program from July, 2021.
+									</div>
+									<div class="col-md-4 mt-5">
+										<img src="images/slide5.jpg" style="display: block;width: 100%;">
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container mt-4">
+		<div class="row pt-2">
+			<div class="col-md-6 col-sm-12">
 				<div class="line mt-3 "></div>
 				<h4 class="ml-4 pt-3">ADMISSION <span class="h5 font-weight-bold" style="color: #8B4513;">ZONE</span></h4>
-				<h5 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">B.Tech+M.Tech/MS Admissions 2020</h5>
-				<div class="col-12 mt-4">
-					<div class="well font-weight-bold h6" style="max-height: 216px;overflow: auto;">
-						<ul class="list-group checked-list-box">
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">B.Tech+M.Tech/MS Admissions 2020</h6>
+				<div class="col-12 mt-3">
+					<div class="well font-weight-bold h6">
+						<ul class="list-group checked-list-box" id="content1">
 							<li class="list-group-item" style="background-color: #FAF0E6">Admissions through CSAB-2020/JOSAA-2020</li>
 							<li class="list-group-item" style="background-color: #FAF0E6 ">Admissions through DASA scheme-2020</li>
 							<li class="list-group-item" style="background-color: #FAF0E6 ">School of Engineering facilitates online
@@ -226,13 +349,13 @@ $result = $conn->query($sql);
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12 bg-bag ">
+			<div class="col-md-6 col-sm-12 bg-bag">
 				<div class="line mt-3"></div>
 				<h4 class="ml-4 pt-3">NOTICE <span class="h5 font-weight-bold" style="color: #8B4513;">BOARD</span></h4>
-				<h5 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">Informatiion</h5>
-				<div class="col-12 mt-4">
-					<div class="well font-weight-bold h6" style="max-height: 216px;overflow: auto;">
-						<ul class="list-group checked-list-box">
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">INFORMATION</h6>
+				<div class="col-12 mt-3">
+					<div class="well font-weight-bold h6">
+						<ul class="list-group checked-list-box" id="content2">
 							<?php
 							if ($result && $result->num_rows) {
 								while ($row = $result->fetch_assoc()) {
@@ -250,13 +373,13 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</section>
-	<section class="container mt-5">
+	<section class="container mt-3">
 		<div class="row pt-5">
 			<div class="col-md-8 col-sm-12 bg-bag">
 				<div class="line mt-3"></div>
 				<h4 class="ml-4 pt-3">ACADEMIC <span class="h5 font-weight-bold" style="color: #8B4513;">ACTIVITIES</span></h4>
-				<h5 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">CAMPUS EVENTS</h5>
-				<div class="col-12 mt-4">
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">CAMPUS EVENTS</h6>
+				<div class="col-12 mt-3">
 					<div id="owl-demo" class="owl-carousel owl-theme owl-1">
 						<div class="item"><img src="images/slide4.jpg" alt="Owl Image"></div>
 						<div class="item"><img src="images/slide5.jpg" alt="Owl Image"></div>
@@ -270,12 +393,213 @@ $result = $conn->query($sql);
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-12 bg-bag">
+			<div class="col-md-4 col-sm-12">
 				<div class="line mt-3"></div>
 				<h4 class="ml-4 pt-3">RESEARCH <span class="h5 font-weight-bold" style="color: #8B4513;">UPDATES</span></h4>
-				<h5 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">Informatiion</h5>
-				<div class="col-12 mt-4">
-					<div id="owl-demo" class="owl-carousel owl-theme owl-2">
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">INFORMATION</h6>
+				<div class="col-12 mt-3">
+					<div class="row">
+						<div class="card border-danger golge">
+							<div class="card-body">
+								<div class="carousel vert s/slide" data-ride="carousel" data-interval="3000">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<ul class="timeline">
+												<li>
+													<a target="_blank" href="#">Research header</a>
+													<a href="#" class="float-right">09 Ocak, 2019</a>
+													<p class="article">Haberler burada gözükecek..</p>
+												</li>
+												<hr>
+												<li>
+													<a href="#">Research header</a>
+													<a href="#" class="float-right">4 Temmuz, 2018</a>
+													<p>Haberler burada gözükecek..Haberler burada gözükecek..</p>
+												</li>
+												<hr>
+												<li>
+													<a href="#">Research header</a>
+													<a href="#" class="float-right">4 Temmuz, 2018</a>
+													<p>Haberler burada gözükecek..Haberler burada gözükecek.</p>
+												</li>
+											</ul>
+										</div>
+										<div class="carousel-item">
+											<ul class="timeline">
+												<li>
+													<a href="#">Research header</a>
+													<a href="#" class="float-right">09 Ocak, 2019</a>
+													<p class="article">>Haberler burada gözükecek..</p>
+												</li>
+												<hr>
+												<li>
+													<a href="#">Research header</a>
+													<a href="#" class="float-right">4 Temmuz, 2018</a>
+													<p>Haberler burada gözükecek..Haberler burada gözükecek.</p>
+												</li>
+												<hr>
+												<li>
+													<a href="#">Research header</a>
+													<a href="#" class="float-right">4 Temmuz, 2018</a>
+													<p>Haberler burada gözükecek..Haberler burada gözükecek.</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container mt-3">
+		<div class="row">
+			<div class="blog_section col-md-8">
+				<div class="line mt-3"></div>
+				<h4 class="ml-4 pt-3">EVENTS <span class="h5 font-weight-bold" style="color: #8B4513;">SEMINARS</span></h4>
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">LATEST</h6>
+				<div class="blog_content mt-3">
+					<div class="owl-carousel owl-theme owl-4">
+						<div class="blog_item">
+							<div class="blog_image">
+								<img class="img-fluid" src="images/slide4.jpg" alt="images not found">
+								<span><i class="icon ion-md-create"></i></span>
+							</div>
+							<div class="blog_details">
+								<ul>
+									<li><i class="icon ion-md-person"></i>Alex</li>
+									<li><i class="icon ion-md-calendar"></i>August 1, 2018</li>
+								</ul>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...</p>
+								<a href="#">Read More<i class="icofont-long-arrow-right"></i></a>
+							</div>
+						</div>
+						<div class="blog_item">
+							<div class="blog_image">
+								<img class="img-fluid" src="images/slide5.jpg" alt="images not found">
+								<span><i class="icon ion-md-create"></i></span>
+							</div>
+							<div class="blog_details">
+								<ul>
+									<li><i class="icon ion-md-person"></i>Alex</li>
+									<li><i class="icon ion-md-calendar"></i>August 1, 2018</li>
+								</ul>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...</p>
+								<a href="#">Read More<i class="icofont-long-arrow-right"></i></a>
+							</div>
+						</div>
+						<div class="blog_item">
+							<div class="blog_image">
+								<img class="img-fluid" src="images/slide6.jpg" alt="images not found">
+								<span><i class="icon ion-md-create"></i></span>
+							</div>
+							<div class="blog_details">
+								<ul>
+									<li><i class="icon ion-md-person"></i>Alex</li>
+									<li><i class="icon ion-md-calendar"></i>August 1, 2018</li>
+								</ul>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...</p>
+								<a href="#">Read More<i class="icofont-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 bg-bag">
+
+				<!-- Fluid width widget -->
+				<div class="line mt-3"></div>
+				<h4 class="ml-4 pt-3">NEWS <span class="h5 font-weight-bold" style="color: #8B4513;">UPDATES</span></h4>
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">SOE IN MEDIA</h6>
+				<div class="panel panel-danger mt-3">
+					<div class="panel-body">
+						<ul class="media-list">
+							<li class="media">
+								<div class="media-left">
+									<div class="text-center date mr-2">
+										<div class="panel-heading month">
+											<span class="panel-title strong h5">
+												Mar
+											</span>
+										</div>
+										<div class="panel-body day text-info h5">
+											23
+										</div>
+									</div>
+								</div>
+								<div class="media-body">
+									<h5 class="media-heading text-danger">
+										Pulvinar Mauris Eu
+									</h5>
+									<p>
+										Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
+									</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<div class="text-center date mr-2">
+										<div class="panel-heading month">
+											<span class="panel-title strong h5">
+												Mar
+											</span>
+										</div>
+										<div class="panel-body day text-info h5">
+											23
+										</div>
+									</div>
+								</div>
+								<div class="media-body">
+									<h5 class="media-heading text-danger">
+										Pulvinar Mauris Eu
+									</h5>
+									<p>
+										Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
+									</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<div class="text-center date mr-2">
+										<div class="panel-heading month">
+											<span class="panel-title strong h5">
+												Mar
+											</span>
+										</div>
+										<div class="panel-body day text-info h5">
+											23
+										</div>
+									</div>
+								</div>
+								<div class="media-body">
+									<h5 class="media-heading text-danger">
+										Pulvinar Mauris Eu
+									</h5>
+									<p>
+										Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
+									</p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<!-- End fluid width widget -->
+			</div>
+		</div>
+	</section>
+
+	<section class="container mt-3">
+		<div class="row">
+			<div class="blog_section col-md-12 bg-bag">
+				<div class="line mt-3"></div>
+				<h4 class="ml-4 pt-3">SOCIAL <span class="h5 font-weight-bold" style="color: #8B4513;">INITIATIVES</span></h4>
+				<h5 class="text-center bg-info text-white mt-3 pt-1" style="height: 30px;">JNU CLUBS</h5>
+				<div class="col-12 mt-3">
+					<div id="owl-demo" class="owl-carousel owl-theme owl-3">
 						<div class="item"><img src="images/slide4.jpg" alt="Owl Image"></div>
 						<div class="item"><img src="images/slide5.jpg" alt="Owl Image"></div>
 						<div class="item"><img src="images/slide6.jpg" alt="Owl Image"></div>
@@ -291,141 +615,198 @@ $result = $conn->query($sql);
 		</div>
 	</section>
 
-	<section class="container mt-5">
+	<section class="container mt-3">
 		<div class="row">
-			<div class="blog_section col-md-8 bg-bag">
-				<div class="line mt-3"></div>
-				<h4 class="ml-4 pt-3">EVENTS <span class="h5 font-weight-bold" style="color: #8B4513;">SEMINARS</span></h4>
-				<h5 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">LATEST</h5>
-				<div class="blog_content mt-4">
-					<div class="owl-carousel owl-theme owl-4">
-						<div class="blog_item">
-							<div class="blog_image">
-								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2019/03/10/18/31/hong-kong-4046913_960_720.jpg" alt="images not found">
-								<span><i class="icon ion-md-create"></i></span>
-							</div>
-							<div class="blog_details">
-								<ul>
-									<li><i class="icon ion-md-person"></i>Alex</li>
-									<li><i class="icon ion-md-calendar"></i>August 1, 2018</li>
-								</ul>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...</p>
-								<a href="#">Read More<i class="icofont-long-arrow-right"></i></a>
-							</div>
-						</div>
-						<div class="blog_item">
-							<div class="blog_image">
-								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/07/09/22/45/tree-838667_960_720.jpg" alt="images not found">
-								<span><i class="icon ion-md-create"></i></span>
-							</div>
-							<div class="blog_details">
-								<ul>
-									<li><i class="icon ion-md-person"></i>Alex</li>
-									<li><i class="icon ion-md-calendar"></i>August 1, 2018</li>
-								</ul>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...</p>
-								<a href="#">Read More<i class="icofont-long-arrow-right"></i></a>
-							</div>
-						</div>
-						<div class="blog_item">
-							<div class="blog_image">
-								<img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_960_720.jpg" alt="images not found">
-								<span><i class="icon ion-md-create"></i></span>
-							</div>
-							<div class="blog_details">
-								<ul>
-									<li><i class="icon ion-md-person"></i>Alex</li>
-									<li><i class="icon ion-md-calendar"></i>August 1, 2018</li>
-								</ul>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...</p>
-								<a href="#">Read More<i class="icofont-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
-
+			<div class="col-md-5 col-sm-3 col-xs-2">
 				<!-- Fluid width widget -->
 				<div class="line mt-3"></div>
-				<h4 class="ml-4 pt-3">NEWS <span class="h5 font-weight-bold" style="color: #8B4513;">UPDATES</span></h4>
-				<h5 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">SOE IN MEDIA</h5>
-				<div class="panel panel-danger mt-4">
-					<div class="panel-body">
-						<ul class="media-list">
-							<li class="media bg-bag">
-								<div class="media-left">
-									<div class="panel panel-danger text-center date">
-										<div class="panel-heading month">
-											<span class="panel-title strong ">
-												Mar
-											</span>
-										</div>
-										<div class="panel-body day text-info">
-											23
-										</div>
-									</div>
+				<h4 class="ml-4 pt-3">FAQ '<span class="h5 font-weight-bold" style="color: #8B4513;"> S</span></h4>
+				<h6 class="text-center bg-info text-white pt-1 mt-3" style="height: 30px;">FREQUENTLY ASKED QUESTIONS</h6>
+				<div class="col-md-12">
+					<ul id="accordion" class="col-sm-6 col-md-12 mt-3">
+						<!-- Question one -->
+						<li class="mb-2">
+							<div class="panel-heading" id="choose" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								How often do you upgrade the system ?
+								<span class="fa fa-plus fa-1x text-info pull-right d-none d-sm-block"></span>
+							</div>
+							<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
 								</div>
-								<div class="media-body">
-									<h4 class="media-heading text-danger">
-										Pulvinar Mauris Eu
-									</h4>
-									<p>
-										Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
-									</p>
+							</div>
+						</li>
+
+						<!-- Question two -->
+						<li class="mb-2">
+							<div class="collapsed panel-heading" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Where do I go incase I have a complaint?
+								<span class="fa fa-plus fa-1x text-info pull-right d-none d-sm-block"></span>
+							</div>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
 								</div>
-							</li>
-							<li class="media bg-bag">
-								<div class="media-left">
-									<div class="panel panel-danger text-center date">
-										<div class="panel-heading month">
-											<span class="panel-title strong">
-												Jan
-											</span>
-										</div>
-										<div class="panel-body text-info day">
-											16
-										</div>
-									</div>
+							</div>
+						</li>
+
+						<!-- Question three -->
+						<li class="mb-2">
+							<div class="collapsed panel-heading" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Do you have any outlets in the country ?
+								<span class="fa fa-plus fa-1x text-info pull-right d-none d-sm-block"></span>
+							</div>
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
 								</div>
-								<div class="media-body">
-									<h4 class="media-heading text-danger">
-										Aenean Consectetur Ultricies
-									</h4>
-									<p>
-										Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
-									</p>
+							</div>
+						</li>
+
+						<!-- Question Four -->
+						<li class="mb-2">
+							<div class="collapsed panel-heading" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								How can I file a complaint?
+								<span class="fa fa-plus fa-1x text-info pull-right d-none d-sm-block"></span>
+							</div>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
 								</div>
-							</li>
-							<li class="media bg-bag">
-								<div class="media-left">
-									<div class="panel panel-danger text-center date">
-										<div class="panel-heading month">
-											<span class="panel-title strong">
-												Jan
-											</span>
-										</div>
-										<div class="panel-body text-info day">
-											16
-										</div>
-									</div>
+							</div>
+						</li>
+
+						<!-- Questiion Five -->
+						<li class="mb-2">
+							<div class="collapsed panel-heading" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								How can I join the team?
+								<span class="fa fa-plus fa-1x text-info pull-right d-none d-sm-block"></span>
+							</div>
+							<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
 								</div>
-								<div class="media-body">
-									<h4 class="media-heading text-danger">
-										Aenean Consectetur Ultricies
-									</h4>
-									<p>
-										Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
-									</p>
+							</div>
+						</li>
+
+						<!-- Question Six-->
+						<li class="mb-2">
+							<div class="collapsed panel-heading" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+								In case I forgot my password, what do I do?
+								<span class="fa fa-plus fa-1x text-info pull-right d-none d-sm-block"></span>
+							</div>
+							<div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
 								</div>
-							</li>
-						</ul>
-					</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 				<!-- End fluid width widget -->
 			</div>
-		</div>
+
+			<div class="col-md-7 col-sm-12 bg-bag" id="photos">
+				<div class="line mt-3"></div>
+				<h4 class="ml-4 pt-3">JNU <span class="h5 font-weight-bold" style="color: #8B4513;">GALLERY</span> <span class="badge badge-info ml-2">MORE</span></h4>
+				<h6 class="text-center bg-info text-white p-1 mt-3" style="height: 30px;">PHOTOS@JNU</h6>
+				<div class="row mt-3 gallery">
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide4.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide5.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide6.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide4.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide5.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide6.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide4.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide5.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide6.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide4.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide5.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+					<div class="col-md-3 p-2">
+						<figure>
+							<img src="images/slide6.jpg" alt="" />
+							<figcaption>Daytona Beach <small>United States</small></figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="row mt-3 s/slider-gallery">
+					<div class="col-sm-12 pic">
+						<div class="owl-carousel owl-5">
+							<img src="images/slide4.jpg">
+							<img src="images/slide5.jpg">
+							<img src="images/slide6.jpg">
+							<img src="images/slide4.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
 	</section>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+		<symbol id="close" viewBox="0 0 18 18">
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
+			S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
+			l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
+			c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
+			s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z" />
+		</symbol>
+	</svg>
+	<!-- End Ajay -->
+
 	<!--footer starts from here-->
 	<footer class="footer">
 		<div class="container p-2 p-md-3 bottom_border">
@@ -505,8 +886,6 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 
-
-
 		<div class="container">
 			<ul class="foote_bottom_ul_amrc">
 				<li><a href="http://webenlance.com">Home</a></li>
@@ -533,15 +912,12 @@ $result = $conn->query($sql);
 			<i class="fas fa-arrow-up"></i>
 		</a>
 	</div>
+	<!-- required js files -->
 	<script src="libs/jquery-3.5.1.js"></script>
 	<script src="libs/popper-2.5.3.js"></script>
 	<script src="libs/bootstrap-4.5.3.js"></script>
 	<!-- Swiper JS -->
 	<script src="js/swiper-bundle-min.js"></script>
-	<!-- Owl Corousel -->
-	<script src="owlcarousel/owl.carousel.min.js"></script>
-	<script src="js/owl-corousel.js"></script>
-
 	<!-- Initialize Swiper -->
 	<script>
 		window.onresize = function() {
@@ -595,239 +971,14 @@ $result = $conn->query($sql);
 		document.querySelector('.swiper-container').style.height = h + 'px';
 		console.log(h);
 	</script>
-	<!-- Navbar sticky-top -->
-	<script>
-		var hoheader = document.querySelector(".header-top").offsetHeight + document.querySelector(".header-middle").offsetHeight;
-		console.log(hoheader);
-		$(function($) {
-		$(window).on('scroll', function() {
-		if ($(this).scrollTop() >= hoheader) {
-		$('.navbar').addClass('fixed-top');
-		} else if ($(this).scrollTop() < hoheader) { $('.navbar').removeClass('fixed-top'); } }); function adjustNav() { var winWidth=$(window).width(), dropdown=$('.dropdown'), dropdownMenu=$('.dropdown-menu'); if (winWidth>= 768) {
-			dropdown.on('mouseenter', function() {
-			$(this).addClass('show')
-			.children(dropdownMenu).addClass('show');
-			});
-
-			dropdown.on('mouseleave', function() {
-			$(this).removeClass('show')
-			.children(dropdownMenu).removeClass('show');
-			});
-			} else {
-			dropdown.off('mouseenter mouseleave');
-			}
-			}
-
-			$(window).on('resize', adjustNav);
-
-			adjustNav();
-			});
-			</script>
-			<!-- text animation -->
-			<script>
-				jQuery(document).ready(function($) {
-					//set animation timing
-					var animationDelay = 2500,
-						//loading bar effect
-						barAnimationDelay = 3800,
-						barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
-						//letters effect
-						lettersDelay = 50,
-						//type effect
-						typeLettersDelay = 150,
-						selectionDuration = 500,
-						typeAnimationDelay = selectionDuration + 800,
-						//clip effect 
-						revealDuration = 600,
-						revealAnimationDelay = 1500;
-
-					initHeadline();
-
-
-					function initHeadline() {
-						//insert <i> element for each letter of a changing word
-						singleLetters($('.cd-headline.letters').find('b'));
-						//initialise headline animation
-						animateHeadline($('.cd-headline'));
-					}
-
-					function singleLetters($words) {
-						$words.each(function() {
-							var word = $(this),
-								letters = word.text().split(''),
-								selected = word.hasClass('is-visible');
-							for (i in letters) {
-								if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
-								letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
-							}
-							var newLetters = letters.join('');
-							word.html(newLetters).css('opacity', 1);
-						});
-					}
-
-					function animateHeadline($headlines) {
-						var duration = animationDelay;
-						$headlines.each(function() {
-							var headline = $(this);
-
-							if (headline.hasClass('loading-bar')) {
-								duration = barAnimationDelay;
-								setTimeout(function() {
-									headline.find('.cd-words-wrapper').addClass('is-loading')
-								}, barWaiting);
-							} else if (headline.hasClass('clip')) {
-								var spanWrapper = headline.find('.cd-words-wrapper'),
-									newWidth = spanWrapper.width() + 10
-								spanWrapper.css('width', newWidth);
-							} else if (!headline.hasClass('type')) {
-								//assign to .cd-words-wrapper the width of its longest word
-								var words = headline.find('.cd-words-wrapper b'),
-									width = 0;
-								words.each(function() {
-									var wordWidth = $(this).width();
-									if (wordWidth > width) width = wordWidth;
-								});
-								headline.find('.cd-words-wrapper').css('width', width);
-							};
-
-							//trigger animation
-							setTimeout(function() {
-								hideWord(headline.find('.is-visible').eq(0))
-							}, duration);
-						});
-					}
-
-					function hideWord($word) {
-						var nextWord = takeNext($word);
-
-						if ($word.parents('.cd-headline').hasClass('type')) {
-							var parentSpan = $word.parent('.cd-words-wrapper');
-							parentSpan.addClass('selected').removeClass('waiting');
-							setTimeout(function() {
-								parentSpan.removeClass('selected');
-								$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
-							}, selectionDuration);
-							setTimeout(function() {
-								showWord(nextWord, typeLettersDelay)
-							}, typeAnimationDelay);
-
-						} else if ($word.parents('.cd-headline').hasClass('letters')) {
-							var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
-							hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
-							showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
-
-						} else if ($word.parents('.cd-headline').hasClass('clip')) {
-							$word.parents('.cd-words-wrapper').animate({
-								width: '2px'
-							}, revealDuration, function() {
-								switchWord($word, nextWord);
-								showWord(nextWord);
-							});
-
-						} else if ($word.parents('.cd-headline').hasClass('loading-bar')) {
-							$word.parents('.cd-words-wrapper').removeClass('is-loading');
-							switchWord($word, nextWord);
-							setTimeout(function() {
-								hideWord(nextWord)
-							}, barAnimationDelay);
-							setTimeout(function() {
-								$word.parents('.cd-words-wrapper').addClass('is-loading')
-							}, barWaiting);
-
-						} else {
-							switchWord($word, nextWord);
-							setTimeout(function() {
-								hideWord(nextWord)
-							}, animationDelay);
-						}
-					}
-
-					function showWord($word, $duration) {
-						if ($word.parents('.cd-headline').hasClass('type')) {
-							showLetter($word.find('i').eq(0), $word, false, $duration);
-							$word.addClass('is-visible').removeClass('is-hidden');
-
-						} else if ($word.parents('.cd-headline').hasClass('clip')) {
-							$word.parents('.cd-words-wrapper').animate({
-								'width': $word.width() + 10
-							}, revealDuration, function() {
-								setTimeout(function() {
-									hideWord($word)
-								}, revealAnimationDelay);
-							});
-						}
-					}
-
-					function hideLetter($letter, $word, $bool, $duration) {
-						$letter.removeClass('in').addClass('out');
-
-						if (!$letter.is(':last-child')) {
-							setTimeout(function() {
-								hideLetter($letter.next(), $word, $bool, $duration);
-							}, $duration);
-						} else if ($bool) {
-							setTimeout(function() {
-								hideWord(takeNext($word))
-							}, animationDelay);
-						}
-
-						if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
-							var nextWord = takeNext($word);
-							switchWord($word, nextWord);
-						}
-					}
-
-					function showLetter($letter, $word, $bool, $duration) {
-						$letter.addClass('in').removeClass('out');
-
-						if (!$letter.is(':last-child')) {
-							setTimeout(function() {
-								showLetter($letter.next(), $word, $bool, $duration);
-							}, $duration);
-						} else {
-							if ($word.parents('.cd-headline').hasClass('type')) {
-								setTimeout(function() {
-									$word.parents('.cd-words-wrapper').addClass('waiting');
-								}, 200);
-							}
-							if (!$bool) {
-								setTimeout(function() {
-									hideWord($word)
-								}, animationDelay)
-							}
-						}
-					}
-
-					function takeNext($word) {
-						return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
-					}
-
-					function takePrev($word) {
-						return (!$word.is(':first-child')) ? $word.prev() : $word.parent().children().last();
-					}
-
-					function switchWord($oldWord, $newWord) {
-						$oldWord.removeClass('is-visible').addClass('is-hidden');
-						$newWord.removeClass('is-hidden').addClass('is-visible');
-					}
-				});
-			</script>
-			<!-- smooth scroll -->
-			<script>
-				// ********** smooth scroll ************
-				$(document).ready(() => {
-					$(window).scroll(() => {
-						console.log($(window).scrollTop());
-						if ($(window).scrollTop() >= 500) {
-							console.log($('.to-top-link'));
-							$('.to-top-link').addClass('show-link');
-						} else {
-							$('.to-top-link').removeClass('show-link');
-						}
-					});
-				});
-			</script>
-			<script src="js/responsive-navbar.js"></script>
+	<!-- Owl Corousel -->
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<!-- bulletin and slider -->
+	<script type="text/javascript" src="js/bullet-script.js"></script>
+	<!-- main js -->
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<!-- navbar responsive -->
+	<script type="text/javascript" src="js/responsive-navbar.js"></script>
 </body>
 
 </html>

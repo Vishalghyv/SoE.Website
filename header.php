@@ -116,6 +116,8 @@
 					</ul>
 			</nav>
 		</div>
-	</header>
+  </header>
+  
+	<script src="js/responsive-navbar.js"></script>
 </body>
 </html>
