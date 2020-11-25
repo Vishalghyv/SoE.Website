@@ -43,25 +43,19 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Programmes</a>
+							<a class="nav-link" href="admission.php">Admission</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Admission</a>
+							<a class="nav-link" href="faculty.php">Faculty</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Faculty</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Research</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Events</a>
+							<a class="nav-link" href="events.php">Events</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
+							<a class="nav-link" href="student.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student <i class="fa fa-caret-down" style="font-size:15px"></i></a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="#">Clubs</a>
 								<a class="dropdown-item" href="#">Start Up</a>
@@ -69,10 +63,10 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Facilities</a>
+							<a class="nav-link" href="facilities.php">Facilities</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Gallary</a>
+							<a class="nav-link" href="gallery.php">Gallery</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Contact Us</a>
