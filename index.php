@@ -284,7 +284,7 @@ include 'scripts.php';
 					<div class="row">
 						<div class="card border-danger golge">
 							<div class="card-body">
-								<div class="carousel vert s/slide" data-ride="carousel" data-interval="3000">
+								<div class="carousel vert slide" data-ride="carousel" data-interval="3000">
 									<div class="carousel-inner">
 										<div class="carousel-item active">
 											<ul class="timeline">
@@ -667,7 +667,7 @@ include 'scripts.php';
 						</figure>
 					</div>
 				</div>
-				<div class="row mt-3 s/slider-gallery">
+				<div class="row mt-3 slider-gallery">
 					<div class="col-sm-12 pic">
 						<div class="owl-carousel owl-5">
 							<img src="images/slide4.jpg">
